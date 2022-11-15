@@ -12,87 +12,62 @@
 
 #include "libft.h"
 
-char	*ft_extract(char const *str, int start, int end)
+static int	ft_count_words(char const *s, char c)
 {
-	char	*result;
-	int		i;
+    int	i;
+    int	count;
 
-	result = malloc(sizeof(char) * (end - start + 1));
-	if (!result)
-		return (NULL);
-	i = 0;
-	while (str[start] && start < end)
-	{
-		result[i] = str[start++];
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
+    i = 0;
+    count = 0;
+    while (s[i])
+    {
+        if (s[i] != c)
+        {
+            count++;
+            while (s[i] != c && s[i])
+                i++;
+        }
+        else
+            i++;
+    }
+    return (count);
 }
 
-int	ft_count_sep(char const *s, char sep)
+void    ft_free(char **tab, int i)
 {
-	int	i;
-	int	temp;
-	int	size;
-
-	size = 0;
-	i = 0;
-	temp = -1;
-	while (s[i])
-	{
-		if (s[i] == sep)
-		{
-			if (i - temp != 1)
-				size++;
-			temp = i;
-		}
-		i++;
-	}
-	if (i != 0 && s[i - 1] != sep)
-		size++;
-	return (size);
+    while (i >= 0)
+        free(tab[i--]);
+    free(tab);
 }
 
-void	ft_free_all(char **table)
+char    **ft_split(char const *s, char c)
 {
-	while (*table)
-		free(*table++);
-	free(table);
-}
+    char	**res;
+    int		size;
+    int		i;
+    int		ii;
+    int		start;
 
-//TODO: fix protection check for second malloc
-char	**ft_split(char const *s, char c)
-{
-	char	**res;
-	int		temp;
-	int		i;
-	int		ii;
-
-	res = malloc(sizeof(char *) * (ft_count_sep(s, c) + 1));
-	if (!res)
-		return (NULL);
-	i = -1;
-	ii = 0;
-	temp = -1;
-	while (s[++i])
-	{
-		if (s[i] == c)
-		{
-			if (i - temp != 1)
-			{
-				res[ii] = ft_extract(s, temp + 1, i);
-				if (!res[ii++])
-				{
-					ft_free_all(res);
-					return (NULL);
-				}
-			}
-			temp = i;
-		}
-	}
-	if (i != 0 && s[i - 1] != c)
-		res[ii++] = ft_extract(s, temp + 1, i);
-	res[ii] = NULL;
-	return (res);
+    size = ft_count_words(s, c);
+    res = (char **)malloc(sizeof(char *) * (size + 1));
+    if (!res)
+        return (NULL);
+    i = 0;
+    ii = 0;
+    while (size-- > 0)
+    {
+        while (s[i] == c)
+            i++;
+        start = i;
+        while (s[i] != c || !s[i])
+            i++;
+        res[ii++] = ft_substr(s, start, i - start);
+        if (!res[ii - 1])
+        {
+            ft_free(res, ii - 1);
+            return (NULL);
+        }
+    }
+    res[ii] = NULL;
+    return (res);
 }
