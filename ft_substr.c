@@ -12,35 +12,22 @@
 
 #include "libft.h"
 
-//using s[i] insted of *s to avoid coping address
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*res;
 	size_t	i;
-	size_t	j;
 
-	i = len;
-	j = ft_strlen(s);
-	if (len > j && start >= j)
-			i = j;
-	else if (len > j)
-		i = start;
-	if (!i)
-		i++;
-	res = (char *)malloc(sizeof(char) * (i));
+	if (start > ft_strlen(s))
+		return (ft_strdup(""));
+	res = (char *)malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (s[i])
+	while (i < len && s[start + i])
 	{
-		if (i >= start && j < len)
-		{
-			res[j] = s[i];
-			j++;
-		}
+		res[i] = s[start + i];
 		i++;
 	}
-	res[j] = '\0';
+	res[i] = '\0';
 	return (res);
 }
