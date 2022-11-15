@@ -56,4 +56,4 @@ dkms.conf
 
 # Test files
 test.c
-test-exe
+win-test.cmd
