@@ -33,7 +33,7 @@ CC			= gcc
 ifeq (${IS_WIN}, 1)
 	DIRSEP	= \\
 	CP		= copy
-	RM		= del -f
+	RM		= del
 else
 	DIRSEP	= /
 	CP		= cp
