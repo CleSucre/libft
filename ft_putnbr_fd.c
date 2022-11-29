@@ -22,7 +22,11 @@ void	ft_putnbr_fd(int n, int fd)
 		ft_putchar_fd('-', fd);
 		i *= -1;
 	}
-	if (i >= 9)
+	if (i < 10)
+		ft_putchar_fd(i + '0', fd);
+	else
+	{
 		ft_putnbr_fd(i / 10, fd);
-	ft_putchar_fd((i % 10) + '0', fd);
+		ft_putnbr_fd(i % 10, fd);
+	}
 }
