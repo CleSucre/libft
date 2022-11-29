@@ -6,7 +6,7 @@
 /*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:18:00 by jthomas           #+#    #+#             */
-/*   Updated: 2022/11/15 16:18:00 by jthomas          ###   ########.fr       */
+/*   Updated: 2022/11/29 06:08:06 by jthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-    while (lst->next)
-        lst = lst->next;
-    return (lst);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
