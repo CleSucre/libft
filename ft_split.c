@@ -6,7 +6,7 @@
 /*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 05:40:46 by jthomas           #+#    #+#             */
-/*   Updated: 2022/11/29 05:53:09 by jthomas          ###   ########.fr       */
+/*   Updated: 2022/12/03 00:41:09 by jthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,14 +51,17 @@ int	ft_exec(char **dst, int size, char const *s, char c)
 	while (size-- > 0)
 	{
 		while (s[i] == c)
-			start = ++i;
-		while (s[i] != c || !s[i])
 			i++;
-		dst[ii++] = ft_substr(s, start, i - start);
-		if (dst[ii - 1])
-			continue ;
-		ft_free(dst, ii - 1);
-		return (1);
+		start = i;
+		while (s[i] != c && s[i])
+			i++;
+		dst[ii] = ft_substr(s, start, i - start);
+		if (!dst[ii])
+		{
+			ft_free(dst, ii);
+			return (1);
+		}
+		ii++;
 	}
 	dst[ii] = NULL;
 	return (0);
