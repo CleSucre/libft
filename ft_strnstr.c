@@ -6,7 +6,7 @@
 /*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 19:21:37 by jthomas           #+#    #+#             */
-/*   Updated: 2022/11/04 20:50:00 by jthomas          ###   ########.fr       */
+/*   Updated: 2022/12/06 22:30:40 by jthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	ii;
 
+	if (!haystack && len <= 0)
+		return (NULL);
 	if (!*needle)
 		return ((char *)haystack);
 	i = -1;

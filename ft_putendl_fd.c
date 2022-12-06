@@ -6,7 +6,7 @@
 /*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 05:15:27 by jthomas           #+#    #+#             */
-/*   Updated: 2022/11/11 05:21:05 by jthomas          ###   ########.fr       */
+/*   Updated: 2022/12/06 22:19:07 by jthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (fd < 0)
+	if (!s)
 		return ;
 	ft_putstr_fd(s, fd);
 	write(fd, "\n", 1);

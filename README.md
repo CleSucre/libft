@@ -1,6 +1,6 @@
 # Libft for 42
 
-> :warning: **Project has not been tested yet.** :warning:
+> 🎉🥳 All tests passed! 🥳🎉
 
 ## What is it?
 
@@ -18,7 +18,7 @@ The subject file is available [here](resources/fr.subject.libft.pdf) ([subject](
 
 - [x] Basic functions
 - [x] Bonus functions
-- [ ] Support Makefile for Windows
+- [x] Support Makefile for Windows
 - [ ] Reorganize files
 - [ ] Reformat code in my proper style
 - [ ] Do cool stuff :upside_down_face:

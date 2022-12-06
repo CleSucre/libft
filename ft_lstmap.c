@@ -6,7 +6,7 @@
 /*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 16:54:00 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/03 01:36:12 by jthomas          ###   ########.fr       */
+/*   Updated: 2022/12/06 22:14:31 by jthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,15 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*res;
+	t_list	*t;
 
 	if (!lst)
 		return (NULL);
-	res = ft_lstnew(f(lst->content));
+	t = f(lst->content);
+	res = ft_lstnew(t);
 	if (res == NULL)
 	{
+		free(t);
 		ft_lstclear(&res, del);
 		return (NULL);
 	}

@@ -6,7 +6,7 @@
 #    By: jthomas <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/02 15:21:01 by jthomas           #+#    #+#              #
-#    Updated: 2022/11/11 05:28:01 by jthomas          ###   ########.fr        #
+#    Updated: 2022/12/06 22:05:15 by jthomas          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,8 @@ OBJS_BONUS	= ${SRCS_BONUS:.c=.o}
 
 CC			= gcc
 
+CFLAGS		= -Wall -Wextra -Werror
+
 ifeq (${IS_WIN}, 1)
 	DIRSEP	= \\
 	CP		= copy
@@ -40,11 +42,9 @@ else
 	RM		= rm -f
 endif
 
-CFLAGS		= -Wall -Wextra -Werror -I.
-
 LIBFT 		= ar crs ${NAME} ${OBJS}
 
-LIBFT_BONUS	= ar crs ${NAME} ${OBJS} ${OBJS_BONUS}
+LIBFT_BONUS	= ar crs ${NAME} ${OBJS_BONUS}
 
 ${NAME}: ${OBJS}
 	${LIBFT}

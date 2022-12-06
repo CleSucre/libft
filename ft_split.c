@@ -6,7 +6,7 @@
 /*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 05:40:46 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/03 00:41:09 by jthomas          ###   ########.fr       */
+/*   Updated: 2022/12/06 22:17:52 by jthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,8 @@ char	**ft_split(char const *s, char c)
 	char	**res;
 	int		size;
 
+	if (!s)
+		return (NULL);
 	size = ft_count_words(s, c);
 	res = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!res)
