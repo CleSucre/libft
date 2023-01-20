@@ -59,7 +59,7 @@ fclean: clean
 
 re: fclean all
 
-bonus: ${OBJS_BONUS}
+bonus: ${OBJS} ${OBJS_BONUS}
 	${LIBFT_BONUS}
 
 .PHONY: all clean fclean re bonus
