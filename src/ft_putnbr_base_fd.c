@@ -27,11 +27,11 @@ int	ft_putnbr_base_fd(int nbr, char *base, int fd)
 	}
 	if (i < size) {
 		ft_putchar_fd(base[i], fd);
-		return 1;
+		return (1);
 	} else {
 		temp = 0;
 		temp += ft_putnbr_base_fd(i / size, base, fd);
 		temp += ft_putnbr_base_fd(i % size, base, fd);
-		return (temp);
 	}
+	return (temp);
 }
