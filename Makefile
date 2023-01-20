@@ -57,7 +57,4 @@ fclean: clean
 
 re: fclean all
 
-bonus: ${OBJS} ${OBJS_BONUS}
-	${LIBFT_BONUS}
-
-.PHONY: all clean fclean re bonus
+.PHONY: all clean fclean re
