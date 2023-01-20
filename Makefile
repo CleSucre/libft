@@ -13,7 +13,7 @@
 ifeq ($(OS), Windows_NT)
 	DIRSEP	= \\
 	CP		= copy
-	RM		= del
+	RM		= del -f
 else
 	DIRSEP	= /
 	CP		= cp
