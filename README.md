@@ -20,6 +20,6 @@ The subject file is available [here](resources/fr.subject.libft.pdf) ([subject](
 - [x] Bonus functions
 - [x] Support Makefile for Windows
 - [x] Reorganize files
-- [ ] Reformat code in my proper style
+- [x] Reformat code in my proper style
 - [ ] Add definitions to each functions
 - [ ] Do cool stuff :upside_down_face:
