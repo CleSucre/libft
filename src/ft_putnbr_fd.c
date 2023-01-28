@@ -6,7 +6,7 @@
 /*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 05:15:39 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:10:47 by jthomas          ###   ########.fr       */
+/*   Updated: 2023/01/28 15:23:10 by jthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,13 @@ int	ft_putnbr_fd(int n, int fd)
 		i *= -1;
 		temp++;
 	}
-	if (i < 10) {
+	if (i < 10)
+	{
 		ft_putchar_fd(i + '0', fd);
 		temp++;
-	} else {
+	}
+	else
+	{
 		temp += ft_putnbr_fd(i / 10, fd);
 		temp += ft_putnbr_fd(i % 10, fd);
 	}

@@ -6,7 +6,7 @@
 /*   By: jthomas <jthomas@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 13:07:56 by jthomas           #+#    #+#             */
-/*   Updated: 2022/11/29 05:06:38 by jthomas          ###   ########.fr       */
+/*   Updated: 2023/01/28 15:23:43 by jthomas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,10 +57,10 @@ size_t	ft_nbrlen(long n);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-int 	ft_putchar_fd(char c, int fd);
-int 	ft_putstr_fd(char *s, int fd);
-int 	ft_putendl_fd(char *s, int fd);
-int 	ft_putnbr_fd(int n, int fd);
+int		ft_putchar_fd(char c, int fd);
+int		ft_putstr_fd(char *s, int fd);
+int		ft_putendl_fd(char *s, int fd);
+int		ft_putnbr_fd(int n, int fd);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t count, size_t size);
 t_list	*ft_lstnew(void *content);
@@ -73,5 +73,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 int		ft_putnbr_base_fd(int nbr, char *base, int fd);
-int 	ft_putlnbr_fd(long n, int fd);
+int		ft_putlnbr_fd(long n, int fd);
 #endif
