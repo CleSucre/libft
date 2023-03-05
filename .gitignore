@@ -44,7 +44,6 @@
 
 # Kernel Module Compile Results
 *.mod*
-*.cmd
 .tmp_versions/
 modules.order
 Module.symvers
@@ -56,7 +55,6 @@ dkms.conf
 
 # Test files
 main.c
-win-test.cmd
 
 # CMake
 cmake-build-debug/
