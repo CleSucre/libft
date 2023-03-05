@@ -12,6 +12,10 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * ft_putlnbr_fd: print a long number on a file descriptor (fd) and return the number of characters printed.
+ */
+
 int	ft_putlnbr_fd(long n, int fd)
 {
 	long long	ll;

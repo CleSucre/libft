@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+ * Return the length of a number
+ */
+
 size_t	ft_nbrlen(long n)
 {
 	size_t	i;

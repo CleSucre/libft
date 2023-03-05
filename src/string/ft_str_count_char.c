@@ -12,7 +12,10 @@
 
 #include "../../includes/libft.h"
 
-//count number of int c in string str.
+/*
+ * Count the number of char int c in a string.
+ */
+
 size_t	ft_str_count_char(char const *str, int c)
 {
 	size_t	res;

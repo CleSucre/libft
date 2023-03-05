@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+ * Check if the character is a whitespace.
+ */
+
 int	ft_isspace(int c)
 {
 	return ((c >= 9 && c <= 13) || c == ' ');

@@ -12,6 +12,10 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * ft_putnbr_base_fd: print a number in a given base on a file descriptor (fd) and return the number of characters printed.
+ */
+
 int	ft_putnbr_base_fd(int nbr, char *base, int fd)
 {
 	long	i;

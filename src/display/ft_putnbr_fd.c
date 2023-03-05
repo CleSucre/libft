@@ -12,6 +12,10 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * Writes the integer n to the given file descriptor and return the number of characters printed.
+ */
+
 int	ft_putnbr_fd(int n, int fd)
 {
 	long	i;

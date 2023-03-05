@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+ * Convert a lowercase letter to an uppercase letter.
+ */
+
 int	ft_toupper(int c)
 {
 	if (!ft_isalpha(c) || ft_isupper(c))

@@ -12,6 +12,10 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * Writes the string s to the given file descriptor and return the number of characters printed.
+ */
+
 int	ft_putstr_fd(char *s, int fd)
 {
 	int	i;

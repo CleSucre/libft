@@ -12,6 +12,10 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * Move memory area src to memory area dst.
+ */
+
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char		*res;

@@ -12,6 +12,10 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * Allocates (with malloc(3)) and returns a copy of ’s1’ with the terminating null byte included.
+ */
+
 char	*ft_strdup(const char *s1)
 {
 	char	*res;

@@ -12,7 +12,10 @@
 
 #include "../../includes/libft.h"
 
-//count the number of chars in string s1 corresponding to chars in s2.
+/*
+ * Count the number of char in s2 in a string.
+ */
+
 size_t	ft_str_count_chars(char const *s1, char const *s2)
 {
 	size_t	res;

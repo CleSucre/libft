@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+ * Check if the character is printable.
+ */
+
 int	ft_isprint(int c)
 {
 	return (c >= 0x20 && c <= 0x7e);

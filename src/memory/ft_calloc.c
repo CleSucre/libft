@@ -12,6 +12,10 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * Allocates memory using malloc and set bytes to 0 using ft_bzero function.
+ */
+
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*res;

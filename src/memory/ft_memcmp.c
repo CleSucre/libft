@@ -12,6 +12,11 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * Compares byte string s1 against byte string s2. Both strings are assumed to
+ * be n bytes long.
+ */
+
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*cps1;

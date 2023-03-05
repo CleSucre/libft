@@ -12,6 +12,10 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * Locate the last occurrence of a character in a string.
+ */
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+ * Fill the first n bytes of the memory area pointed to by s with '\0'.
+ */
+
 void	ft_bzero(void *s, size_t n)
 {
 	char	*res;

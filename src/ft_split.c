@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+ * split a string into an array of strings using the character c as a delimiter
+ */
+
 static int	ft_count_words(char const *s, char c)
 {
 	int	i;

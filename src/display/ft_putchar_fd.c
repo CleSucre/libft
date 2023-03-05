@@ -12,6 +12,11 @@
 
 #include "../../includes/libft.h"
 
+/*
+ * Writes the character c to the given file descriptor and returns 1 if successful
+ * or -1 if an error occurred.
+ */
+
 int	ft_putchar_fd(char c, int fd)
 {
 	return (write(fd, &c, 1));

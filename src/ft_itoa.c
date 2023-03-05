@@ -12,6 +12,10 @@
 
 #include "../includes/libft.h"
 
+/*
+ * convert an integer to a string
+ */
+
 void	ft_insert(char *dst, long n, int *i)
 {
 	if (n > 9)
