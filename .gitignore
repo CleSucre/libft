@@ -55,5 +55,8 @@ dkms.conf
 .idea/
 
 # Test files
-test.c
+main.c
 win-test.cmd
+
+# CMake
+cmake-build-debug/
