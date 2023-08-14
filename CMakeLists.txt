@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.24)
+
 project(libft C)
 
 set(CMAKE_C_STANDARD 11)
 
 set(SOURCE_FILES
-        main.c
+        debug.c
         src/ft_atoi.c
         src/ft_bzero.c
         src/memory/ft_calloc.c
@@ -57,8 +58,9 @@ set(SOURCE_FILES
         src/string/ft_substr.c
         src/ft_tolower.c
         src/ft_toupper.c
+        test/ft_atoi_test.c
 )
 
-add_library(libft main.c)
+add_library(libft debug.c)
 
 add_executable(libft_executable ${SOURCE_FILES})
