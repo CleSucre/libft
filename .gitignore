@@ -1,12 +1,10 @@
 # Executables
 *.exe
 *.out
+*.a
 
 # Jetbrain
 .idea/
-
-# Test files
-debug.c
 
 # CMake
 cmake-build-debug/
