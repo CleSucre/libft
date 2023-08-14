@@ -13,7 +13,7 @@ To use the library, you need to compile it first. To do so, run `make` in the ro
 - [x] Basic functions
 - [x] Bonus functions
 - [x] Support Makefile for Windows
-- [ ] Reorganize files
+- [x] Reorganize files
+- [x] Add definitions to each functions
 - [ ] Reformat code in my proper style
-- [ ] Add definitions to each functions
 - [ ] Do cool stuff :upside_down_face:
