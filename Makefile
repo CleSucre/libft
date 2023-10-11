@@ -36,10 +36,11 @@ HEAD		= includes
 
 CFLAGS		= -Wall -Wextra -Werror -I ${HEAD}
 
-LIBFT 		= ar crs ${NAME} ${OBJS}
+%.o : %.c
+	${CC} ${CFLAGS} -o $@ -c $<
 
 ${NAME}: ${OBJS}
-	${LIBFT}
+	ar crs ${NAME} ${OBJS}
 
 all: ${NAME}
 
