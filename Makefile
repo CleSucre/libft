@@ -28,6 +28,9 @@ SRCS		= src${DIRSEP}ft_atoi.c src${DIRSEP}ft_bzero.c src${DIRSEP}ft_isalnum.c sr
               src${DIRSEP}display${DIRSEP}ft_putchar_fd.c src${DIRSEP}display${DIRSEP}ft_putendl_fd.c src${DIRSEP}display${DIRSEP}ft_putlnbr_fd.c src${DIRSEP}display${DIRSEP}ft_putnbr_base_fd.c src${DIRSEP}display${DIRSEP}ft_putnbr_fd.c src${DIRSEP}display${DIRSEP}ft_putstr_fd.c \
               src${DIRSEP}chain${DIRSEP}ft_lstadd_back.c src${DIRSEP}chain${DIRSEP}ft_lstadd_front.c src${DIRSEP}chain${DIRSEP}ft_lstclear.c src${DIRSEP}chain${DIRSEP}ft_lstdelone.c src${DIRSEP}chain${DIRSEP}ft_lstiter.c src${DIRSEP}chain${DIRSEP}ft_lstlast.c src${DIRSEP}chain${DIRSEP}ft_lstmap.c src${DIRSEP}chain${DIRSEP}ft_lstnew.c src${DIRSEP}chain${DIRSEP}ft_lstsize.c \
 
+SRCS_UT		= unitests\main.c  unitests\unitest.h \
+			  unitests/tests/test_ft_atoi.c unitests/tests/test_ft_bzero.c unitests/tests/test_ft_isalnum.c unitests/tests/test_ft_isalpha.c unitests/tests/test_ft_isascii.c unitests/tests/test_ft_isdigit.c unitests/tests/test_ft_islower.c unitests/tests/test_ft_isprint.c unitests/tests/test_ft_isspace.c unitests/tests/test_ft_isupper.c unitests/tests/test_ft_itoa.c unitests/tests/test_ft_nbrlen.c unitests/tests/test_ft_split.c unitests/tests/test_ft_str_count_char.c unitests/tests/test_ft_str_count_chars.c unitests/tests/test_ft_strchr.c unitests/tests/test_ft_strcmp.c unitests/tests/test_ft_strdup.c unitests/tests/test_ft_striteri.c unitests/tests/test_ft_strjoin.c unitests/tests/test_ft_strlcat.c unitests/tests/test_ft_strlen.c unitests/tests/test_ft_tolower.c unitests/tests/test_ft_toupper.c
+
 OBJS		= ${SRCS:.c=.o}
 
 CC			= gcc
@@ -43,6 +46,10 @@ ${NAME}: ${OBJS}
 	ar crs ${NAME} ${OBJS}
 
 all: ${NAME}
+
+unitest: all
+	${CC} ${SRCS_UT} -L . -lft -I includes -o unitest
+	./unitest
 
 clean: 
 	${RM} ${OBJS}
