@@ -24,6 +24,8 @@ int ft_test(t_test_info *info)
 
 int main(void) {
     t_test_info tests[] = {
+            {test_ft_strcmp,          "ft_strcmp"},
+
             {test_ft_atoi,          "ft_atoi"},
             {test_ft_bzero,          "ft_bzero"},
             {test_ft_isalnum,          "ft_isalnum"},
@@ -38,23 +40,21 @@ int main(void) {
             {test_ft_split,          "ft_split"},
             {test_ft_tolower,          "ft_tolower"},
             {test_ft_toupper,          "ft_toupper"},
-
             {test_ft_str_count_char,          "ft_str_count_char"},
             {test_ft_str_count_chars,          "ft_str_count_chars"},
             {test_ft_strchr,          "ft_strchr"},
-            {test_ft_strcmp,          "ft_strcmp"},
             {test_ft_strdup,          "ft_strdup"},
             {test_ft_striteri,          "ft_striteri"},
             {test_ft_strjoin,          "ft_strjoin"},
             {test_ft_strlcat,          "ft_strlcat"},
-            //{test_ft_strlcpy,          "ft_strlcpy"},
-            //{test_ft_strlen,          "ft_strlen"},
-            //{test_ft_strmapi,          "ft_strmapi"},
-            //{test_ft_strncmp,          "ft_strncmp"},
-            //{test_ft_strnstr,          "ft_strnstr"},
-            //{test_ft_strrchr,          "ft_strrchr"},
-            //{test_ft_strtrim,          "ft_strtrim"},
-            //{test_ft_substr,          "ft_substr"},
+            {test_ft_strlcpy,          "ft_strlcpy"},
+            {test_ft_strlen,          "ft_strlen"},
+            {test_ft_strmapi,          "ft_strmapi"},
+            {test_ft_strncmp,          "ft_strncmp"},
+            {test_ft_strnstr,          "ft_strnstr"},
+            {test_ft_strrchr,          "ft_strrchr"},
+            {test_ft_strtrim,          "ft_strtrim"},
+            {test_ft_substr,          "ft_substr"},
 
 
     };

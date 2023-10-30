@@ -43,5 +43,4 @@ int test_ft_strrchr(void);
 int test_ft_strtrim(void);
 int test_ft_substr(void);
 
-
 #endif
