@@ -25,7 +25,6 @@ int ft_test(t_test_info *info)
 int main(void) {
     t_test_info tests[] = {
             {test_ft_strcmp,          "ft_strcmp"},
-
             {test_ft_atoi,          "ft_atoi"},
             {test_ft_bzero,          "ft_bzero"},
             {test_ft_isalnum,          "ft_isalnum"},
@@ -55,8 +54,12 @@ int main(void) {
             {test_ft_strrchr,          "ft_strrchr"},
             {test_ft_strtrim,          "ft_strtrim"},
             {test_ft_substr,          "ft_substr"},
-
-
+            {test_ft_memcmp,          "ft_memcmp"},
+            {test_ft_memchr,          "ft_memchr"},
+            {test_ft_memcpy,          "ft_memcpy"},
+            {test_ft_memmove,          "ft_memmove"},
+            {test_ft_memset,          "ft_memset"},
+            {test_ft_calloc,          "ft_calloc"},
     };
     int         i;
     int         nb_tests;

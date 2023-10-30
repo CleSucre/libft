@@ -43,4 +43,11 @@ int test_ft_strrchr(void);
 int test_ft_strtrim(void);
 int test_ft_substr(void);
 
+int test_ft_memcmp(void);
+int test_ft_memchr(void);
+int test_ft_memcpy(void);
+int test_ft_memmove(void);
+int test_ft_memset(void);
+int test_ft_calloc(void);
+
 #endif
