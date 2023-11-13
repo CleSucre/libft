@@ -62,7 +62,7 @@ all: ${NAME}
 
 clean: 
 	${RM} -r ${OBJS}
-	rm -r ${OBJ_PATH} 2> /dev/null || true
+	rm -r ${OBJ_PATH}
 
 fclean: clean
 	${RM} ${NAME}
