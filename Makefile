@@ -37,8 +37,13 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  get_next_line${DIRSEP}get_next_line.c \
 			  ft_printf${DIRSEP}ft_printf.c
 
+OBJ_PATH	= obj${DIRSEP}
 
-OBJS		= ${addprefix src${DIRSEP}, ${SRCS:%.c=%.o}}
+SRC_PATH	= src${DIRSEP}
+
+OBJ_NAME	= ${addprefix ${SRC_PATH}, ${SRCS:%.c=%.o}}
+
+OBJS		= ${addprefix ${OBJ_PATH}, ${OBJ_NAME}}
 
 CC			= gcc
 
@@ -46,16 +51,18 @@ HEAD		= include
 
 CFLAGS		= -Wall -Wextra -Werror -I ${HEAD}
 
-%.o : %.c
+${OBJ_PATH}%.o: %.c
+	mkdir -p ${@D}
 	${CC} ${CFLAGS} -o $@ -c $<
 
 ${NAME}: ${OBJS}
-	ar crs ${NAME} ${OBJS}
+	ar cr ${NAME} ${OBJS}
 
 all: ${NAME}
 
 clean: 
-	${RM} ${OBJS}
+	${RM} -r ${OBJS}
+	rm -r ${OBJ_PATH} 2> /dev/null || true
 
 fclean: clean
 	${RM} ${NAME}
