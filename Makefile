@@ -53,7 +53,7 @@ HEAD		= include
 CFLAGS		= -Wall -Wextra -Werror -I ${HEAD}
 
 ${OBJ_PATH}%.o: %.c
-	mkdir -p ${@D}
+	mkdir -p ${@D} 2> /dev/null || true
 	${CC} ${CFLAGS} -o $@ -c $<
 
 ${NAME}: ${OBJS}
@@ -62,7 +62,7 @@ ${NAME}: ${OBJS}
 all: ${NAME}
 
 clean: 
-	rm -r ${OBJ_PATH}
+	rm -r ${OBJ_PATH} 2> /dev/null || true
 
 fclean: clean
 	${RM} ${NAME}
