@@ -1,18 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:03:03 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:03:06 by julthoma         ###   ########.fr       */
+/*   Created: 2023/11/02 17:06:24 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:06:26 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	return (c >= 'A' && c <= 'Z');
+	char	*res;
+	int		i;
+	int		ii;
+
+	if (!s1 || !s2)
+		return (NULL);
+	res = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
+	if (!res)
+		return (NULL);
+	i = 0;
+	while (s1[i])
+	{
+		res[i] = s1[i];
+		i++;
+	}
+	ii = 0;
+	while (s2[ii])
+		res[i++] = s2[ii++];
+	res[i] = '\0';
+	return (res);
 }

@@ -3,22 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 19:50:17 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:12:17 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:07:12 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:07:15 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Convert an uppercase letter to a lowercase letter.
- */
+#include "libft.h"
 
 int	ft_tolower(int c)
 {
-	if (!ft_isalpha(c) || ft_islower(c))
+	if (!ft_isupper(c))
 		return (c);
 	return (c + 32);
 }

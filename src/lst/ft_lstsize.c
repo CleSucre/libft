@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:03:03 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:03:06 by julthoma         ###   ########.fr       */
+/*   Created: 2023/11/02 17:12:49 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/13 04:21:24 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+int	ft_lstsize(t_list *lst)
 {
-	return (c >= 'A' && c <= 'Z');
+	int	i;
+
+	i = 0;
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
 }

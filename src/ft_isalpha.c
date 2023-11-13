@@ -3,21 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 15:47:45 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:08:30 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:07:32 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:07:32 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Check if the character is an alphabet.
- */
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
-	return ((c >= 'A' && c <= 'Z')
-		|| (c >= 'a' && c <= 'z'));
+	return (ft_isupper(c) || ft_islower(c));
 }

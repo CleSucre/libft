@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:03:03 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:03:06 by julthoma         ###   ########.fr       */
+/*   Created: 2023/11/02 17:04:46 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:05:33 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	return (c >= 'A' && c <= 'Z');
+	if (!s)
+		return ;
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

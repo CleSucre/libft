@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 19:59:08 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:08:55 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:02:59 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:03:01 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Check if the character is a whitespace.
- */
+#include "libft.h"
 
 int	ft_isspace(int c)
 {

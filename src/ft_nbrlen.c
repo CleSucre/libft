@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 00:21:38 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:10:22 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:04:35 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:04:38 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Return the length of a number
- */
+#include "libft.h"
 
 size_t	ft_nbrlen(long n)
 {

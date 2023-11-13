@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:03:03 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:03:06 by julthoma         ###   ########.fr       */
+/*   Created: 2023/11/02 17:04:30 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:04:33 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	return (c >= 'A' && c <= 'Z');
+	char	*res;
+
+	res = b;
+	while (len)
+	{
+		*res = c;
+		res++;
+		len--;
+	}
+	return (b);
 }

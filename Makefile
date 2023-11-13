@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jthomas <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: julthoma <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/02 15:21:01 by jthomas           #+#    #+#              #
-#    Updated: 2022/12/07 17:06:32 by jthomas          ###   ########.fr        #
+#    Created: 2023/11/02 17:07:47 by julthoma          #+#    #+#              #
+#    Updated: 2023/11/02 17:07:47 by julthoma         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,20 +22,26 @@ endif
 
 NAME		= libft.a
 
-SRCS		= src${DIRSEP}ft_atoi.c src${DIRSEP}ft_bzero.c src${DIRSEP}ft_isalnum.c src${DIRSEP}ft_isalpha.c src${DIRSEP}ft_isascii.c src${DIRSEP}ft_isdigit.c src${DIRSEP}ft_islower.c src${DIRSEP}ft_isprint.c src${DIRSEP}ft_isspace.c src${DIRSEP}ft_isupper.c src${DIRSEP}ft_itoa.c src${DIRSEP}ft_nbrlen.c src${DIRSEP}ft_split.c src${DIRSEP}ft_tolower.c src${DIRSEP}ft_toupper.c \
-              src${DIRSEP}string${DIRSEP}ft_str_count_char.c src${DIRSEP}string${DIRSEP}ft_str_count_chars.c src${DIRSEP}string${DIRSEP}ft_strchr.c src${DIRSEP}string${DIRSEP}ft_strcmp.c src${DIRSEP}string${DIRSEP}ft_strdup.c src${DIRSEP}string${DIRSEP}ft_striteri.c src${DIRSEP}string${DIRSEP}ft_strjoin.c src${DIRSEP}string${DIRSEP}ft_strlcat.c src${DIRSEP}string${DIRSEP}ft_strlcpy.c src${DIRSEP}string${DIRSEP}ft_strlen.c src${DIRSEP}string${DIRSEP}ft_strmapi.c src${DIRSEP}string${DIRSEP}ft_strncmp.c src${DIRSEP}string${DIRSEP}ft_strnstr.c src${DIRSEP}string${DIRSEP}ft_strrchr.c src${DIRSEP}string${DIRSEP}ft_strtrim.c src${DIRSEP}string${DIRSEP}ft_substr.c \
-              src${DIRSEP}memory${DIRSEP}ft_calloc.c src${DIRSEP}memory${DIRSEP}ft_memchr.c src${DIRSEP}memory${DIRSEP}ft_memcmp.c src${DIRSEP}memory${DIRSEP}ft_memcpy.c src${DIRSEP}memory${DIRSEP}ft_memmove.c src${DIRSEP}memory${DIRSEP}ft_memset.c \
-              src${DIRSEP}display${DIRSEP}ft_putchar_fd.c src${DIRSEP}display${DIRSEP}ft_putendl_fd.c src${DIRSEP}display${DIRSEP}ft_putlnbr_fd.c src${DIRSEP}display${DIRSEP}ft_putnbr_base_fd.c src${DIRSEP}display${DIRSEP}ft_putnbr_fd.c src${DIRSEP}display${DIRSEP}ft_putstr_fd.c \
-              src${DIRSEP}chain${DIRSEP}ft_lstadd_back.c src${DIRSEP}chain${DIRSEP}ft_lstadd_front.c src${DIRSEP}chain${DIRSEP}ft_lstclear.c src${DIRSEP}chain${DIRSEP}ft_lstdelone.c src${DIRSEP}chain${DIRSEP}ft_lstiter.c src${DIRSEP}chain${DIRSEP}ft_lstlast.c src${DIRSEP}chain${DIRSEP}ft_lstmap.c src${DIRSEP}chain${DIRSEP}ft_lstnew.c src${DIRSEP}chain${DIRSEP}ft_lstsize.c \
+SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+			  ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
+			  ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_isupper.c ft_islower.c \
+			  ft_tolower.c ft_strchr.c ft_strrchr.c ft_strcmp.c ft_strncmp.c \
+			  ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_isspace.c \
+			  ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_str_count_char.c \
+			  ft_str_count_chars.c ft_nbrlen.c ft_itoa.c ft_strmapi.c ft_striteri.c \
+			  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_strdup.c \
+			  ft_calloc.c ft_putnbr_base_fd.c ft_putlnbr_fd.c \
+			  lst${DIRSEP}ft_lstnew.c lst${DIRSEP}ft_lstadd_front.c \
+			  lst${DIRSEP}ft_lstsize.c lst${DIRSEP}ft_lstlast.c lst${DIRSEP}ft_lstadd_back.c \
+			  lst${DIRSEP}ft_lstdelone.c lst${DIRSEP}ft_lstclear.c lst${DIRSEP}ft_lstiter.c lst${DIRSEP}ft_lstmap.c \
+			  get_next_line${DIRSEP}get_next_line.c
 
-SRCS_UT		= unitests/main.c  unitests/unitest.h \
-			  unitests/tests/test_ft_atoi.c unitests/tests/test_ft_bzero.c unitests/tests/test_ft_isalnum.c unitests/tests/test_ft_isalpha.c unitests/tests/test_ft_isascii.c unitests/tests/test_ft_isdigit.c unitests/tests/test_ft_islower.c unitests/tests/test_ft_isprint.c unitests/tests/test_ft_isspace.c unitests/tests/test_ft_isupper.c unitests/tests/test_ft_itoa.c unitests/tests/test_ft_nbrlen.c unitests/tests/test_ft_split.c unitests/tests/test_ft_str_count_char.c unitests/tests/test_ft_str_count_chars.c unitests/tests/test_ft_strchr.c unitests/tests/test_ft_strcmp.c unitests/tests/test_ft_strdup.c unitests/tests/test_ft_striteri.c unitests/tests/test_ft_strjoin.c unitests/tests/test_ft_strlcat.c unitests/tests/test_ft_strlen.c unitests/tests/test_ft_tolower.c unitests/tests/test_ft_toupper.c unitests/tests/test_ft_strtrim.c unitests/tests/test_ft_substr.c unitests/tests/test_ft_strncmp.c unitests/tests/test_ft_strlcpy.c unitests/tests/test_ft_strmapi.c unitests/tests/test_ft_strnstr.c unitests/tests/test_ft_strrchr.c unitests/tests/test_ft_memchr.c unitests/tests/test_ft_memcmp.c unitests/tests/test_ft_memcpy.c unitests/tests/test_ft_memmove.c unitests/tests/test_ft_memset.c unitests/tests/test_ft_calloc.c
 
-OBJS		= ${SRCS:.c=.o}
+OBJS		= ${addprefix src${DIRSEP}, ${SRCS:%.c=%.o}}
 
 CC			= gcc
 
-HEAD		= includes
+HEAD		= include
 
 CFLAGS		= -Wall -Wextra -Werror -I ${HEAD}
 
@@ -47,10 +53,6 @@ ${NAME}: ${OBJS}
 
 all: ${NAME}
 
-unitest: all
-	${CC} ${SRCS_UT} -L . -lft -I includes -o unitest
-	./unitest
-
 clean: 
 	${RM} ${OBJS}
 
@@ -59,4 +61,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re unitest
+.PHONY: all clean fclean re

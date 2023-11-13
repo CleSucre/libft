@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 17:33:33 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:08:41 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:02:44 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:02:46 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Check if the character is a digit.
- */
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

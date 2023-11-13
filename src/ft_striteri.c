@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:03:03 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:03:06 by julthoma         ###   ########.fr       */
+/*   Created: 2023/11/02 17:06:21 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:06:23 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isupper(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	return (c >= 'A' && c <= 'Z');
+	unsigned int	i;
+
+	if (!s || !f)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		(*f)(i, s + i);
+		i++;
+	}
 }

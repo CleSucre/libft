@@ -1,45 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:03:09 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:03:14 by julthoma         ###   ########.fr       */
+/*   Created: 2023/11/02 17:07:04 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:07:05 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_insert(char *dst, long n, int *i)
-{
-	if (n > 9)
-	{
-		ft_insert(dst, n / 10, i);
-		ft_insert(dst, n % 10, i);
-	}
-	else
-		dst[(*i)++] = n + '0';
-}
-
-char	*ft_itoa(int n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
-	long	num;
+	int		start;
 	int		i;
+	int		ii;
 
-	num = n;
-	res = (char *)malloc(sizeof(char) * (ft_nbrlen(num) + 1));
+	if (!s1)
+		return (NULL);
+	start = -1;
+	while (s1[++start])
+		if (!ft_strchr(set, s1[start]))
+			break ;
+	i = ft_strlen(s1);
+	while (s1[--i])
+		if (!ft_strchr(set, s1[i]))
+			break ;
+	i = i - start + 1;
+	if (i < 0)
+		i = 0;
+	res = (char *)ft_calloc(sizeof(char), (i + 1));
 	if (!res)
 		return (NULL);
-	i = 0;
-	if (num < 0)
-	{
-		res[i++] = '-';
-		num *= -1;
-	}
-	ft_insert(res, num, &i);
-	res[i] = '\0';
+	ii = 0;
+	while (i--)
+		res[ii++] = s1[start++];
 	return (res);
 }

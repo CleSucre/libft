@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 05:40:46 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:10:56 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:05:52 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:05:54 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * split a string into an array of strings using the character c as a delimiter
- */
+#include "libft.h"
 
 static int	ft_count_words(char const *s, char c)
 {
@@ -37,14 +33,14 @@ static int	ft_count_words(char const *s, char c)
 	return (count);
 }
 
-void	ft_free(char **tab, int i)
+static void	ft_free(char **tab, int i)
 {
 	while (i >= 0)
 		free(tab[i--]);
 	free(tab);
 }
 
-int	ft_exec(char **dst, int size, char const *s, char c)
+static int	ft_exec(char **dst, int size, char const *s, char c)
 {
 	int	i;
 	int	ii;
@@ -52,8 +48,9 @@ int	ft_exec(char **dst, int size, char const *s, char c)
 
 	i = 0;
 	ii = 0;
-	while (size-- > 0)
+	while (size > 0)
 	{
+		size--;
 		while (s[i] == c)
 			i++;
 		start = i;

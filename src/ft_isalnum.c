@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 18:25:48 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:08:25 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:02:25 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:02:28 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Check if the character is alphanumeric.
- */
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

@@ -1,45 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:03:09 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:03:14 by julthoma         ###   ########.fr       */
+/*   Created: 2023/11/02 17:07:09 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:07:11 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_insert(char *dst, long n, int *i)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	if (n > 9)
-	{
-		ft_insert(dst, n / 10, i);
-		ft_insert(dst, n % 10, i);
-	}
-	else
-		dst[(*i)++] = n + '0';
-}
-
-char	*ft_itoa(int n)
-{
+	size_t	i;
+	size_t	size;
 	char	*res;
-	long	num;
-	int		i;
 
-	num = n;
-	res = (char *)malloc(sizeof(char) * (ft_nbrlen(num) + 1));
+	if (!s)
+		return (NULL);
+	size = ft_strlen(s);
+	if (size < start)
+	{
+		res = malloc(sizeof(char) * 1);
+		if (!res)
+			return (NULL);
+		res[0] = '\0';
+		return (res);
+	}
+	if (len + start > size)
+		len = size - start;
+	res = malloc(sizeof(char) * (len + 1));
 	if (!res)
 		return (NULL);
-	i = 0;
-	if (num < 0)
-	{
-		res[i++] = '-';
-		num *= -1;
-	}
-	ft_insert(res, num, &i);
+	i = -1;
+	while (++i < len)
+		res[i] = s[start + i];
 	res[i] = '\0';
 	return (res);
 }

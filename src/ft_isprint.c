@@ -3,20 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 17:56:02 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:08:51 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:02:53 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:02:55 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Check if the character is printable.
- */
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
-	return (c >= 0x20 && c <= 0x7e);
+	return (c >= 32 && c <= 126);
 }

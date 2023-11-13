@@ -3,27 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 19:04:03 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:08:06 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:02:05 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:02:09 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Fill the first n bytes of the memory area pointed to by s with '\0'.
- */
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*res;
-
-	res = s;
-	while (n-- > 0)
-	{
-		*res = 0;
-		res++;
-	}
+	ft_memset(s, 0, n);
 }

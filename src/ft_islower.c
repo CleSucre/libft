@@ -3,20 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 19:47:48 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:08:46 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:02:49 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:02:50 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Check if the character is a lowercase letter.
- */
+#include "libft.h"
 
 int	ft_islower(int c)
 {
-	return (c >= 97 && c <= 122);
+	return (c >= 'a' && c <= 'z');
 }

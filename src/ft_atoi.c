@@ -3,18 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jthomas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 19:54:30 by jthomas           #+#    #+#             */
-/*   Updated: 2022/12/07 17:07:42 by jthomas          ###   ########.fr       */
+/*   Created: 2023/11/02 17:01:51 by julthoma          #+#    #+#             */
+/*   Updated: 2023/11/02 17:01:51 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
-
-/*
- * Convert a string to an integer.
- */
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
@@ -31,6 +27,6 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(*str))
 		res = res * 10 + (*str++ - '0');
 	if (is_n)
-		res /= -1;
+		res *= -1;
 	return (res);
 }
