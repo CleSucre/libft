@@ -62,7 +62,6 @@ ${NAME}: ${OBJS}
 all: ${NAME}
 
 clean: 
-	${RM} -r ${OBJS}
 	rm -r ${OBJ_PATH}
 
 fclean: clean
