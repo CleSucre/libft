@@ -69,6 +69,8 @@ char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t count, size_t size);
 int		ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_putlnbr_fd(long n, int fd);
+int		ft_putnbr_unsigned_fd(unsigned int nb, int fd);
+int		ft_putpointer_fd(void *ptr, int fd);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
@@ -81,5 +83,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 char	*get_next_line(int fd);
+
+int		ft_printf(const char *format, ...);
 
 #endif
