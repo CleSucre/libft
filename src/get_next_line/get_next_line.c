@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../include/libft.h"
 
 static char	*ft_get_line(char *readed)
 {
@@ -115,19 +115,19 @@ char	*get_next_line(int fd)
 {
 	static char	*readed[4096];
 	char		*buffer;
-	int			byte_read;
+	int			bytes_read;
 	char		*res;
 
 	buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
 	if (!buffer)
 		return (NULL);
-	byte_read = BUFFER_SIZE;
-	while (!ft_strcontain(readed[fd], '\n') && byte_read == BUFFER_SIZE)
+	bytes_read = BUFFER_SIZE;
+	while (!ft_strcontain(readed[fd], '\n') && bytes_read == BUFFER_SIZE)
 	{
-		byte_read = read(fd, buffer, BUFFER_SIZE);
-		if (byte_read == 0 || byte_read == -1)
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (bytes_read == 0 || bytes_read == -1)
 			break ;
-		buffer[byte_read] = '\0';
+		buffer[bytes_read] = '\0';
 		ft_realloc(&readed[fd], buffer);
 	}
 	free(buffer);
@@ -136,4 +136,32 @@ char	*get_next_line(int fd)
 	res = ft_get_line(readed[fd]);
 	ft_clean_readed(&readed[fd]);
 	return (res);
+}
+
+char	**get_lines(int fd)
+{
+	char	*buffer;
+	char	*file_content;
+	int		bytes_read;
+	char	**lines;
+
+	buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
+	if (!buffer)
+		return (NULL);
+	file_content = NULL;
+	bytes_read = BUFFER_SIZE;
+	while (bytes_read > 0)
+	{
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
+		buffer[bytes_read] = '\0';
+		ft_realloc(&file_content, buffer);
+	}
+	if (bytes_read < 0)
+	{
+		free(file_content);
+		return (NULL);
+	}
+	lines = ft_split(file_content, '\n');
+	free(file_content);
+	return (lines);
 }
