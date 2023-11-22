@@ -42,4 +42,14 @@
 # define BACKGROUND_CYAN "\033[46m"
 # define BACKGROUND_WHITE "\033[47m"
 
+// Hexadecimal colors
+# define HEX_BLACK 0x000000
+# define HEX_RED 0xFF0000
+# define HEX_GREEN 0x00FF00
+# define HEX_YELLOW 0xFFFF00
+# define HEX_BLUE 0x0000FF
+# define HEX_MAGENTA 0xFF00FF
+# define HEX_CYAN 0x00FFFF
+# define HEX_WHITE 0xFFFFFF
+
 #endif
