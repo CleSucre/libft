@@ -72,6 +72,7 @@ int		ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_putlnbr_fd(long n, int fd);
 int		ft_putnbr_unsigned_fd(unsigned int nb, int fd);
 int		ft_putpointer_fd(void *ptr, int fd);
+int		ft_count_words(char const *s, char c);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
