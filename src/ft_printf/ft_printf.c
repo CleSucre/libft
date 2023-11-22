@@ -27,6 +27,8 @@ static int	ft_print_param(va_list ap, const char param, int fd)
 		res += ft_putnbr_fd(va_arg(ap, int), fd);
 	else if (param == 'u')
 		res += ft_putnbr_unsigned_fd(va_arg(ap, unsigned int), fd);
+	else if (param == 'f')
+		res += ft_putnbr_float_fd(va_arg(ap, double), fd);
 	else if (param == 'x')
 		res += ft_putnbr_base_fd(
 				va_arg(ap, unsigned int), "0123456789abcdef", fd);

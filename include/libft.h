@@ -71,6 +71,7 @@ void	*ft_calloc(size_t count, size_t size);
 int		ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_putlnbr_fd(long n, int fd);
 int		ft_putnbr_unsigned_fd(unsigned int nb, int fd);
+int		ft_putnbr_float_fd(double n, int fd);
 int		ft_putpointer_fd(void *ptr, int fd);
 int		ft_count_words(char const *s, char c);
 
