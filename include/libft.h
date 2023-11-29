@@ -33,6 +33,7 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
+size_t	ft_strlentab(const char **s);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -68,6 +69,7 @@ int		ft_putendl_fd(char *s, int fd);
 int		ft_putnbr_fd(int n, int fd);
 char	*ft_strdup(const char *s1);
 void	*ft_calloc(size_t count, size_t size);
+void	ft_realloc(char **s1, const char *s2);
 int		ft_putnbr_base_fd(int nbr, char *base, int fd);
 int		ft_putlnbr_fd(long n, int fd);
 int		ft_putnbr_unsigned_fd(unsigned int nb, int fd);
@@ -89,5 +91,6 @@ char	*get_next_line(int fd);
 char	**get_lines(int fd);
 
 int		ft_printf(const char *format, ...);
+int		ft_fprintf(int fd, const char *format, ...);
 
 #endif
