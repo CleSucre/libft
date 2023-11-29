@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -66,33 +66,6 @@ static void	ft_clean_readed(char **readed)
 	*readed = tmp;
 }
 
-static void	ft_realloc(char **s1, const char *s2)
-{
-	char	*tmp;
-	int		i;
-	int		j;
-
-	if (*s1 == NULL)
-	{
-		*s1 = (char *)malloc(sizeof(char) * 1);
-		if (*s1 == NULL)
-			return ;
-		**s1 = '\0';
-	}
-	tmp = (char *)malloc(sizeof(char) * (ft_strlen(*s1) + ft_strlen(s2) + 1));
-	if (!tmp)
-		return ;
-	i = -1;
-	while ((*s1)[++i])
-		tmp[i] = (*s1)[i];
-	j = 0;
-	while (s2[j])
-		tmp[i++] = s2[j++];
-	tmp[i] = '\0';
-	free(*s1);
-	*s1 = tmp;
-}
-
 static int	ft_strcontain(const char *s, int c)
 {
 	int	i;
@@ -136,32 +109,4 @@ char	*get_next_line(int fd)
 	res = ft_get_line(readed[fd]);
 	ft_clean_readed(&readed[fd]);
 	return (res);
-}
-
-char	**get_lines(int fd)
-{
-	char	*buffer;
-	char	*file_content;
-	int		bytes_read;
-	char	**lines;
-
-	buffer = (char *)malloc(sizeof(char) * (BUFFER_SIZE + 1));
-	if (!buffer)
-		return (NULL);
-	file_content = NULL;
-	bytes_read = BUFFER_SIZE;
-	while (bytes_read > 0)
-	{
-		bytes_read = read(fd, buffer, BUFFER_SIZE);
-		buffer[bytes_read] = '\0';
-		ft_realloc(&file_content, buffer);
-	}
-	if (bytes_read < 0)
-	{
-		free(file_content);
-		return (NULL);
-	}
-	lines = ft_split(file_content, '\n');
-	free(file_content);
-	return (lines);
 }
