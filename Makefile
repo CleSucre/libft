@@ -34,7 +34,7 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  ft_putnbr_unsigned_fd.c ft_putpointer_fd.c ft_count_words.c ft_putnbr_float_fd.c get_lines.c \
 			  lst${DIRSEP}ft_lstnew.c lst${DIRSEP}ft_lstadd_front.c \
 			  lst${DIRSEP}ft_lstsize.c lst${DIRSEP}ft_lstlast.c lst${DIRSEP}ft_lstadd_back.c \
-			  lst${DIRSEP}ft_lstdelone.c lst${DIRSEP}ft_lstclear.c lst${DIRSEP}ft_lstiter.c lst${DIRSEP}ft_lstmap.c \
+			  lst${DIRSEP}ft_lstdelone.c lst${DIRSEP}ft_lstclear.c lst${DIRSEP}ft_lstiter.c lst${DIRSEP}ft_lstmap.c lst${DIRSEP}ft_lstprint.c \
 			  get_next_line${DIRSEP}get_next_line.c \
 			  ft_printf${DIRSEP}ft_printf.c \
 			  sys${DIRSEP}ft_get_path.c
