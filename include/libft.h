@@ -16,10 +16,13 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include <limits.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4096
 # endif
+
+# define WHITESPACES " \t\n\v\f\r"
 
 typedef struct s_list
 {
