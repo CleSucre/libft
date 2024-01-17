@@ -12,19 +12,19 @@
 
 #include "libft.h"
 
-int	ft_count_words(char const *s, char c)
+int	ft_count_words(char const *str, char const *charset)
 {
 	int	i;
 	int	count;
 
 	i = 0;
 	count = 0;
-	while (s[i])
+	while (str[i])
 	{
-		if (s[i] != c)
+		if (str[i] != charset[0] && str[i] != charset[1])
 		{
 			count++;
-			while (s[i] != c && s[i])
+			while (str[i] != charset[0] && str[i] != charset[1] && str[i])
 				i++;
 		}
 		else

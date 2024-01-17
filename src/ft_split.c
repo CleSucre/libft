@@ -12,14 +12,15 @@
 
 #include "libft.h"
 
-static void	ft_free(char **tab, int i)
+static int	ft_free(char **tab, int i)
 {
 	while (i >= 0)
 		free(tab[i--]);
 	free(tab);
+	return (1);
 }
 
-static int	ft_exec(char **dst, int size, char const *s, char c)
+static int	ft_exec(char **dst, int size, char const *str, char const *charset)
 {
 	int	i;
 	int	ii;
@@ -30,16 +31,17 @@ static int	ft_exec(char **dst, int size, char const *s, char c)
 	while (size > 0)
 	{
 		size--;
-		while (s[i] == c)
-			i++;
-		start = i;
-		while (s[i] != c && s[i])
-			i++;
-		dst[ii] = ft_substr(s, start, i - start);
-		if (!dst[ii])
+		if (ft_str_count_char(charset, str[i]) != 0)
 		{
-			ft_free(dst, ii);
-			return (1);
+			i++;
+			while (ft_str_count_char(charset, str[i]) != 0 && str[i])
+				i++;
+			start = i;
+			while (ft_str_count_char(charset, str[i]) == 0 && str[i])
+				i++;
+			dst[ii] = ft_substr(str, start, i - start);
+			if (!dst[ii])
+				return (ft_free(dst, ii));
 		}
 		ii++;
 	}
@@ -47,18 +49,18 @@ static int	ft_exec(char **dst, int size, char const *s, char c)
 	return (0);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split(char const *str, char const *charset)
 {
 	char	**res;
 	int		size;
 
-	if (!s)
+	if (!str)
 		return (NULL);
-	size = ft_count_words(s, c);
+	size = ft_count_words(str, charset);
 	res = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!res)
 		return (NULL);
-	if (ft_exec(res, size, s, c))
+	if (ft_exec(res, size, str, charset))
 		return (NULL);
 	return (res);
 }

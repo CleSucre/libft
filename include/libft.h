@@ -61,7 +61,7 @@ int		ft_isspace(int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
+char	**ft_split(char const *str, char const *charset);
 size_t	ft_str_count_char(char const *str, int c);
 size_t	ft_str_count_chars(char const *s1, char const *s2);
 size_t	ft_nbrlen(long n);
@@ -80,7 +80,7 @@ int		ft_putlnbr_fd(long n, int fd);
 int		ft_putnbr_unsigned_fd(unsigned int nb, int fd);
 int		ft_putnbr_float_fd(double n, int fd);
 int		ft_putpointer_fd(void *ptr, int fd);
-int		ft_count_words(char const *s, char c);
+int		ft_count_words(char const *str, char const *charset);
 
 // ========LIST========
 

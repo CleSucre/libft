@@ -35,7 +35,7 @@ char	**get_lines(int fd)
 		free(file_content);
 		return (NULL);
 	}
-	lines = ft_split(file_content, '\n');
+	lines = ft_split(file_content, "\n");
 	free(file_content);
 	free(buffer);
 	return (lines);

@@ -24,7 +24,7 @@ char	*ft_get_path(char *cmd, char **envp)
 	while (ft_strncmp(envp[i], "PATH=", 5) != 0)
 		i++;
 	path = ft_strdup(envp[i] + 5);
-	paths = ft_split(path, ':');
+	paths = ft_split(path, ":");
 	i = 0;
 	while (paths[i])
 	{
