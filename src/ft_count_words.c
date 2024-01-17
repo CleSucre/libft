@@ -21,10 +21,10 @@ int	ft_count_words(char const *str, char const *charset)
 	count = 0;
 	while (str[i])
 	{
-		if (str[i] != charset[0] && str[i] != charset[1])
+		if (ft_str_count_char(charset, str[i]) == 0)
 		{
 			count++;
-			while (str[i] != charset[0] && str[i] != charset[1] && str[i])
+			while (ft_str_count_char(charset, str[i]) == 0 && str[i])
 				i++;
 		}
 		else
