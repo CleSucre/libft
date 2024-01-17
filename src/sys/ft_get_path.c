@@ -37,6 +37,5 @@ char	*ft_get_path(char *cmd, char **envp)
 		free(path);
 		i++;
 	}
-	ft_printf("command not found: %s\n", cmd);
 	return (NULL);
 }
