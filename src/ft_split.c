@@ -28,21 +28,16 @@ static int	ft_exec(char **dst, int size, char const *str, char const *charset)
 
 	i = 0;
 	ii = 0;
-	while (size > 0)
+	while (size-- > 0)
 	{
-		size--;
-		if (ft_str_count_char(charset, str[i]) != 0)
-		{
+		while (ft_str_count_char(charset, str[i]) != 0)
 			i++;
-			while (ft_str_count_char(charset, str[i]) != 0 && str[i])
-				i++;
-			start = i;
-			while (ft_str_count_char(charset, str[i]) == 0 && str[i])
-				i++;
-			dst[ii] = ft_substr(str, start, i - start);
-			if (!dst[ii])
-				return (ft_free(dst, ii));
-		}
+		start = i;
+		while (ft_str_count_char(charset, str[i]) == 0 && str[i])
+			i++;
+		dst[ii] = ft_substr(str, start, i - start);
+		if (!dst[ii])
+			return (ft_free(dst, ii));
 		ii++;
 	}
 	dst[ii] = NULL;
@@ -54,13 +49,13 @@ char	**ft_split(char const *str, char const *charset)
 	char	**res;
 	int		size;
 
-	if (!str)
+	if (!str || !charset)
 		return (NULL);
 	size = ft_count_words(str, charset);
 	res = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!res)
 		return (NULL);
-	if (ft_exec(res, size, str, charset))
+	if (ft_exec(res, size, str, charset) == 1)
 		return (NULL);
 	return (res);
 }
