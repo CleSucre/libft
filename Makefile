@@ -37,7 +37,7 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  lst${DIRSEP}ft_lstdelone.c lst${DIRSEP}ft_lstclear.c lst${DIRSEP}ft_lstiter.c lst${DIRSEP}ft_lstmap.c lst${DIRSEP}ft_lstprint.c \
 			  get_next_line${DIRSEP}get_next_line.c \
 			  ft_printf${DIRSEP}ft_printf.c \
-			  sys${DIRSEP}ft_get_path.c
+			  mem${DIRSEP}ft_freetab.c
 
 OBJ_PATH	= obj${DIRSEP}
 
