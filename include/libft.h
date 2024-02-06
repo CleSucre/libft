@@ -105,8 +105,8 @@ char	**get_lines(int fd);
 int		ft_printf(const char *format, ...);
 int		ft_fprintf(int fd, const char *format, ...);
 
-// ========SYS========
+// ========MEMORY========
 
-char	*ft_get_path(char *cmd, char **envp);
+int		ft_freetab(char **tab);
 
 #endif
