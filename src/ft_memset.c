@@ -14,26 +14,26 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-    unsigned char *ptr = b;
-    size_t word = (unsigned char)c;
-    word = (word << 8) | word;
-    word = (word << 16) | word;
-    if (sizeof(size_t) == 8)
-        word = (word << 32) | word;
+	unsigned char	*ptr;
+	size_t			word;
 
-    while (len >= sizeof(size_t))
-    {
-        *(size_t *)ptr = word;
-        ptr += sizeof(size_t);
-        len -= sizeof(size_t);
-    }
-
-    while (len > 0)
-    {
-        *ptr = (unsigned char)c;
-        ptr++;
-        len--;
-    }
-
-    return b;
+	ptr = b;
+	word = (unsigned char)c;
+	word = (word << 8) | word;
+	word = (word << 16) | word;
+	if (sizeof(size_t) == 8)
+		word = (word << 32) | word;
+	while (len >= sizeof(size_t))
+	{
+		*(size_t *)ptr = word;
+		ptr += sizeof(size_t);
+		len -= sizeof(size_t);
+	}
+	while (len > 0)
+	{
+		*ptr = (unsigned char)c;
+		ptr++;
+		len--;
+	}
+	return (b);
 }
