@@ -66,6 +66,7 @@ size_t	ft_str_count_char(char const *str, int c);
 size_t	ft_str_count_chars(char const *s1, char const *s2);
 size_t	ft_nbrlen(long n);
 char	*ft_itoa(int n);
+char	*ft_setitoa(char *dst, int n);
 char	*ft_dtoa(double n, int precision);
 void	*ft_setdtoa(char *dst, double n, int precision);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
