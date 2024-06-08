@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = i - start + 1;
 	if (i < 0)
 		i = 0;
-	res = (char *)ft_calloc(sizeof(char), (i + 1));
+	res = (char *)ft_calloc(i + 1, sizeof(char));
 	if (!res)
 		return (NULL);
 	ii = 0;
@@ -60,7 +60,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = end - start + 1;
 	if (i <= 0)
 		i = 0;
-	res = (char *)ft_calloc(sizeof(char), (i + 1));
+	res = (char *)ft_calloc(i + 1, sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;
