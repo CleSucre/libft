@@ -12,17 +12,25 @@
 
 #include "libft.h"
 
-char	*ft_strjoin_list(char const **strs)
+char	*ft_strjoin_list(char const **strs, const char *sep)
 {
 	int		i;
 	char	*res;
+	char	*tmp;
 
 	i = 0;
 	while (strs[i])
 	{
-		res = ft_strjoin(res, strs[i++]);
-		if (!res)
-			return (NULL);
+		tmp = res;
+		res = ft_strjoin(res, strs[i]);
+		free(tmp);
+		if (strs[i + 1])
+		{
+			tmp = res;
+			res = ft_strjoin(res, sep);
+			free(tmp);
+		}
+		i++;
 	}
 	return (res);
 }
