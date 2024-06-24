@@ -66,7 +66,7 @@ char	*ft_strjoin_list(char const **strs, const char *sep);
 char	*ft_charjoin(char *str, char c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *str, char const *charset);
-char	**ft_split_quote(char const *str, char const *charset);
+char	**ft_split_quote(char const *str, char const *charset, const char *quote_set);
 size_t	ft_str_count_char(char const *str, int c);
 size_t	ft_str_count_chars(char const *s1, char const *s2);
 size_t	ft_nbrlen(long n);
