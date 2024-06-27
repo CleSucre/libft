@@ -1,111 +1,94 @@
 #include "libft.h"
 
-// Helper function to handle quote state
-static void	handle_quote(char c, int *in_quotes, char *quote_char, const char *quote_set)
+static char	**initialize_result(int capacity)
 {
-	while (*quote_set) {
-		if (c == *quote_set && (!(*in_quotes) || c == *quote_char)) {
-			*in_quotes = !(*in_quotes);
-			*quote_char = c;
-			break;
-		}
-		quote_set++;
-	}
+	char	**result;
+
+	result = (char **)malloc(capacity * sizeof(char *));
+	if (!result)
+		return (NULL);
+	return (result);
 }
 
-// Helper function to count the number of words
-static int	count_words(const char *str, const char *charset, const char *quote_set)
+static int	resize_result(char ***result, int *capacity)
 {
-	int		count;
-	int		in_quotes;
-	char	quote_char;
+	int		new_capacity;
+	char	**new_result;
 
-	count = 0;
-	in_quotes = 0;
-	quote_char = '\0';
-	while (*str) {
-		while (*str && ft_is_charset(*str, charset) && !in_quotes)
-			str++;
-		if (*str) {
-			count++;
-			while (*str && (!ft_is_charset(*str, charset) || in_quotes)) {
-				handle_quote(*str, &in_quotes, &quote_char, quote_set);
-				str++;
-			}
-		}
-	}
-	return (count);
+	new_capacity = *capacity * 2;
+	new_result = (char **)realloc(*result, new_capacity * sizeof(char *));
+	if (!new_result)
+		return (0);
+	*result = new_result;
+	*capacity = new_capacity;
+	return (1);
 }
 
-// Helper function to get the length of a word
-static size_t	get_word_length(const char *str, const char *charset, const char *quote_set)
+static char	*create_word(const char *start, int length)
 {
-	int		in_quotes;
-	char	quote_char;
-	size_t	len;
+	char	*word;
 
-	in_quotes = 0;
-	quote_char = '\0';
-	len = 0;
-	while (*str && (!ft_is_charset(*str, charset) || in_quotes)) {
-		handle_quote(*str, &in_quotes, &quote_char, quote_set);
-		str++;
-		len++;
-	}
-	return (len);
-}
-
-// Helper function to copy a word to the result array
-static char	*copy_word(const char **str_ptr, const char *charset, const char *quote_set)
-{
-	const char	*str;
-	const char	*start;
-	size_t		len;
-	char		*word;
-
-	str = *str_ptr;
-	start = str;
-	len = get_word_length(str, charset, quote_set);
-	word = (char *)malloc(len + 1);
+	word = (char *)malloc((length + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
-	ft_strncpy(word, start, len);
-	word[len] = '\0';
-	*str_ptr = start + len;
+	ft_strncpy(word, start, length);
+	word[length] = '\0';
 	return (word);
 }
 
+static char	**process_string(const char *str, const char *charset,
+		const char *quote_set, char **result)
+{
+	int			count;
+	char		current_quote;
+	const char	*start;
+	int			capacity;
+
+	count = 0;
+	current_quote = 0;
+	capacity = 10;
+	while (*str)
+	{
+		while (*str && !current_quote && ft_strchr(charset, *str))
+			str++;
+		if (!*str)
+			break ;
+		start = str;
+		while (*str && (current_quote || !ft_strchr(charset, *str)))
+		{
+			if (!current_quote && ft_strchr(quote_set, *str))
+				current_quote = *str;
+			else if (current_quote == *str)
+				current_quote = 0;
+			str++;
+		}
+		if (count == capacity && !resize_result(&result, &capacity))
+		{
+			ft_freetab(result);
+			return (NULL);
+		}
+		result[count++] = create_word(start, str - start);
+	}
+	result[count] = NULL;
+	return (result);
+}
+
 /**
- * @brief Split a string with a charset, support custom quotes
- *        If a charset is between custom quotes, it will be ignored
+ * @brief Split the string into words,
+ * 		if the word is quoted, don't split what's inside.
  *
- * @param char const *str
- * @param char const *charset
- * @param char const *quote_set  // New parameter for custom quote characters
- * @return char	**
+ * @param str The string to split.
+ * @param charset The set of delimiter characters.
+ * @return A dynamically allocated array of strings, NULL-terminated.
  */
-char	**ft_split_quote(char const *str, char const *charset, const char *quote_set)
+char	**ft_split_quote(const char *str,
+		const char *charset, const char *quote_set)
 {
 	char	**result;
-	int		i;
 
-	if (!str || !charset || !quote_set)
-		return (NULL);
-	result = (char **)malloc((count_words(str, charset, quote_set) + 1) * sizeof(char *));
+	result = initialize_result(10);
 	if (!result)
 		return (NULL);
-	i = 0;
-	while (*str) {
-		while (*str && ft_is_charset(*str, charset))
-			str++;
-		if (*str) {
-			result[i] = copy_word(&str, charset, quote_set);
-			if (!result[i++]) {
-				ft_freetab(result);
-				return (NULL);
-			}
-		}
-	}
-	result[i] = NULL;
+	result = process_string(str, charset, quote_set, result);
 	return (result);
 }

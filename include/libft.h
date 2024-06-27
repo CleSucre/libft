@@ -92,6 +92,7 @@ int		ft_count_words(char const *str, char const *charset);
 int		ft_is_charset(char c, const char *charset);
 void	ft_trunc(char **str, size_t era);
 char	*ft_strreplace(char *str, char *old, char *new);
+int		ft_strsameedge(const char *str, const char *edge);
 
 // ========LIST========
 
