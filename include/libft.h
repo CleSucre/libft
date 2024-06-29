@@ -66,7 +66,8 @@ char	*ft_strjoin_list(char const **strs, const char *sep);
 char	*ft_charjoin(char *str, char c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *str, char const *charset);
-char	**ft_split_quote(char const *str, char const *charset, const char *quote_set);
+char	**ft_split_quote(char const *str, char const *charset,
+			const char *quote_set);
 size_t	ft_str_count_char(char const *str, int c);
 size_t	ft_str_count_chars(char const *s1, char const *s2);
 size_t	ft_nbrlen(long n);
@@ -91,16 +92,16 @@ int		ft_putpointer_fd(void *ptr, int fd);
 int		ft_count_words(char const *str, char const *charset);
 int		ft_is_charset(char c, const char *charset);
 void	ft_trunc(char **str, size_t era);
-char	*ft_strreplace(char *str, char *old, char *new);
+char	*ft_strreplace(char *str, char *old, char *new_lst);
 int		ft_strsameedge(const char *str, const char *edge);
 
 // ========LIST========
 
 t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new_lst);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new_lst);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
