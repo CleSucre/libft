@@ -18,6 +18,9 @@ char	*ft_strjoin_list(char const **strs, const char *sep)
 	char	*res;
 	char	*tmp;
 
+	if (!strs)
+		return (NULL);
+	res = NULL;
 	i = 0;
 	while (strs[i])
 	{
