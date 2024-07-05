@@ -98,6 +98,8 @@ char	**ft_split_quote(const char *str,
 {
 	char	**result;
 
+	if (!str)
+		return (NULL);
 	result = initialize_result(10);
 	if (!result)
 		return (NULL);
