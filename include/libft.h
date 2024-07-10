@@ -83,6 +83,7 @@ int		ft_putstr_fd(char *str, int fd);
 int		ft_putendl_fd(char *s, int fd);
 int		ft_putnbr_fd(int n, int fd);
 char	*ft_strdup(const char *s1);
+char	*ft_strndup(char *s1, int len);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_realloc(char **s1, const char *s2);
 int		ft_putnbr_base_fd(int nbr, char *base, int fd);
@@ -95,6 +96,7 @@ int		ft_is_charset(char c, const char *charset);
 void	ft_trunc(char **str, size_t era);
 char	*ft_strreplace(char *str, char *old, char *new_lst);
 int		ft_strsameedge(const char *str, const char *edge);
+char	*string_lower(char *str);
 
 // ========LIST========
 
