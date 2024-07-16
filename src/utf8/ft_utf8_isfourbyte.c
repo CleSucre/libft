@@ -6,12 +6,13 @@
 /*   By: julthoma <julthoma@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 01:05:15 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/17 01:05:16 by julthoma         ###   ########.fr       */
+/*   Updated: 2024/07/17 01:24:49 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_utf8_isfourbyte(unsigned char c) {
-	return (c & 0xF8) == 0xF0;
+int	ft_utf8_isfourbyte(unsigned char c)
+{
+	return ((c & 0xF8) == 0xF0);
 }

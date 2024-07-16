@@ -6,12 +6,13 @@
 /*   By: julthoma <julthoma@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 01:04:56 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/17 01:05:00 by julthoma         ###   ########.fr       */
+/*   Updated: 2024/07/17 01:25:06 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_utf8_istwobyte(unsigned char c) {
-	return (c & 0xE0) == 0xC0;
+int	ft_utf8_istwobyte(unsigned char c)
+{
+	return ((c & 0xE0) == 0xC0);
 }

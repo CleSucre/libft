@@ -6,31 +6,39 @@
 /*   By: julthoma <julthoma@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 00:02:11 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/17 00:55:45 by julthoma         ###   ########.fr       */
+/*   Updated: 2024/07/17 01:30:22 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_utf8_tab_to_str(char **utf8tab)
+static int	ft_utf8_tablen(char **str)
 {
-	char *str;
-	int i;
-	int j;
-	int k;
+	int	res;
+	int	i;
+	int	j;
 
+	res = 0;
 	i = 0;
-	j = 0;
-	k = 0;
-	while (utf8tab[i])
+	while (str[i])
 	{
 		j = 0;
-		while (utf8tab[i][j])
+		while (str[i][j])
 			j++;
-		k += j;
+		res += j;
 		i++;
 	}
-	str = (char *)malloc(sizeof(char) * (k + 1));
+	return (res);
+}
+
+char	*ft_utf8_tab_to_str(char **utf8tab)
+{
+	char	*str;
+	int		i;
+	int		j;
+	int		k;
+
+	str = (char *)malloc(sizeof(char) * (ft_utf8_tablen(utf8tab) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
