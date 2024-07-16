@@ -33,14 +33,8 @@
 # define BOLDCYAN "\033[1m\033[36m"
 # define BOLDWHITE "\033[1m\033[37m"
 
-# define BACKGROUND_BLACK "\033[40m"
-# define BACKGROUND_RED "\033[41m"
-# define BACKGROUND_GREEN "\033[42m"
-# define BACKGROUND_YELLOW "\033[43m"
-# define BACKGROUND_BLUE "\033[44m"
-# define BACKGROUND_MAGENTA "\033[45m"
-# define BACKGROUND_CYAN "\033[46m"
-# define BACKGROUND_WHITE "\033[47m"
+# define BACKGROUND_WHITE "\x1b[47m"
+# define TEXT_BLACK "\x1b[30m"
 
 // Hexadecimal colors
 # define HEX_BLACK 0x000000

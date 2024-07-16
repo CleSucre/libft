@@ -17,7 +17,13 @@ char	*ft_charjoin(char *str, char c)
 	char	*dst;
 	size_t	i;
 
-	dst = (char *)malloc(sizeof(char) * (ft_strlen(str) + 2));
+	if (!str)
+	{
+		dst = ft_calloc(2, sizeof(char));
+		dst[0] = c;
+		return (dst);
+	}
+	dst = ft_calloc(ft_strlen(str) + 2, sizeof(char));
 	if (!dst)
 		return (NULL);
 	i = 0;
@@ -29,7 +35,6 @@ char	*ft_charjoin(char *str, char c)
 	dst[i] = c;
 	i++;
 	dst[i] = '\0';
-	if (str)
-		free(str);
+	free(str);
 	return (dst);
 }

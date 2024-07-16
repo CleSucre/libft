@@ -55,7 +55,7 @@ char	*ft_strreplace(char *str, char *old, char *new)
 	int		i;
 	int		j;
 
-	res = malloc(final_size(str, old, new) + 1);
+	res = ft_calloc(final_size(str, old, new) + 1, sizeof(char));
 	if (!res)
 		return (NULL);
 	i = 0;

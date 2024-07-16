@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_list.c                                  :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mpierrot <mpierrot@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:06:24 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:06:26 by julthoma         ###   ########.fr       */
+/*   Created: 2024/07/07 13:12:28 by mpierrot          #+#    #+#             */
+/*   Updated: 2024/07/07 13:12:28 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin_list(char const **strs, const char *sep)
+/**
+ *  @brief Duplicate a string with a specific length
+ *  @return char * The duplicate string
+ */
+char	*ft_strndup(char *s1, int len)
 {
-	int		i;
 	char	*res;
-	char	*tmp;
+	int		i;
 
-	if (!strs)
+	res = (char *)ft_calloc(ft_strlen(s1) + 1, sizeof(char));
+	if (!res)
 		return (NULL);
-	res = NULL;
 	i = 0;
-	while (strs[i])
+	while (s1[i] && i < len)
 	{
-		tmp = res;
-		res = ft_strjoin(res, strs[i]);
-		free(tmp);
-		if (strs[i + 1])
-		{
-			tmp = res;
-			res = ft_strjoin(res, sep);
-			free(tmp);
-		}
+		res[i] = s1[i];
 		i++;
 	}
+	res[i] = '\0';
 	return (res);
 }

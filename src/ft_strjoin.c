@@ -39,3 +39,27 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	res[i] = '\0';
 	return (res);
 }
+
+char	*ft_strjoin_free(char *s1, char *s2)
+{
+	char	*res;
+
+	if (!s1 && !s2)
+		return (NULL);
+	if (!s1)
+	{
+		res = ft_strdup(s2);
+		free(s2);
+		return (res);
+	}
+	if (!s2)
+	{
+		res = ft_strdup(s1);
+		free(s1);
+		return (res);
+	}
+	res = ft_strjoin(s1, s2);
+	free(s1);
+	free(s2);
+	return (res);
+}

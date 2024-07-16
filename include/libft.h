@@ -62,12 +62,15 @@ int		ft_atoi(const char *str);
 int		ft_isspace(int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin_free(char *s1, char *s2);
 char	**ft_tabjoin(const char **tab1, const char **tab2);
 char	*ft_strjoin_list(char const **strs, const char *sep);
 char	*ft_charjoin(char *str, char c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *str, char const *charset);
-char	**ft_split_quote(char const *str, char const *charset);
+char	**ft_split_quote(char const *str, char const *charset,
+			const char *quote_set);
+char	**ft_strsplit(const char *str, const char *separator);
 size_t	ft_str_count_char(char const *str, int c);
 size_t	ft_str_count_chars(char const *s1, char const *s2);
 size_t	ft_nbrlen(long n);
@@ -82,6 +85,7 @@ int		ft_putstr_fd(char *str, int fd);
 int		ft_putendl_fd(char *s, int fd);
 int		ft_putnbr_fd(int n, int fd);
 char	*ft_strdup(const char *s1);
+char	*ft_strndup(char *s1, int len);
 void	*ft_calloc(size_t count, size_t size);
 void	ft_realloc(char **s1, const char *s2);
 int		ft_putnbr_base_fd(int nbr, char *base, int fd);
@@ -92,15 +96,17 @@ int		ft_putpointer_fd(void *ptr, int fd);
 int		ft_count_words(char const *str, char const *charset);
 int		ft_is_charset(char c, const char *charset);
 void	ft_trunc(char **str, size_t era);
-char	*ft_strreplace(char *str, char *old, char *new);
+char	*ft_strreplace(char *str, char *old, char *new_lst);
+int		ft_strsameedge(const char *str, const char *edge);
+char	*string_lower(char *str);
 
 // ========LIST========
 
 t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new_lst);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new_lst);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));

@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_str_lower.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mpierrot <mpierrot@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:12:56 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:12:58 by julthoma         ###   ########.fr       */
+/*   Created: 2024/07/07 13:12:28 by mpierrot          #+#    #+#             */
+/*   Updated: 2024/07/10 09:09:10 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new_lst)
+/**
+ * @brief Convert a string to lowercase
+ * @param *str The string to convert
+ * @return char * The converted string
+ */
+char	*string_lower(char *str)
 {
-	t_list	*t;
+	int	i;
 
-	if (!lst || !new_lst)
-		return ;
-	if (*lst)
+	i = 0;
+	while (str[i])
 	{
-		t = ft_lstlast(*lst);
-		t->next = new_lst;
+		str[i] = ft_tolower(str[i]);
+		i++;
 	}
-	else
-		*lst = new_lst;
+	return (str);
 }
