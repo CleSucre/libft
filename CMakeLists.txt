@@ -14,7 +14,7 @@ set(SRCS
         ${SRC_PATH}/ft_strlcpy.c ${SRC_PATH}/ft_strlcat.c ${SRC_PATH}/ft_toupper.c ${SRC_PATH}/ft_isupper.c ${SRC_PATH}/ft_islower.c
         ${SRC_PATH}/ft_tolower.c ${SRC_PATH}/ft_strchr.c ${SRC_PATH}/ft_strrchr.c ${SRC_PATH}/ft_strcmp.c ${SRC_PATH}/ft_strncmp.c
         ${SRC_PATH}/ft_memchr.c ${SRC_PATH}/ft_memcmp.c ${SRC_PATH}/ft_strnstr.c ${SRC_PATH}/ft_atoi.c ${SRC_PATH}/ft_isspace.c
-        ${SRC_PATH}/ft_substr.c ${SRC_PATH}/ft_strjoin.c ${SRC_PATH}/ft_strjoin_list.c ${SRC_PATH}/ft_charjoin.c ${SRC_PATH}/ft_strtrim.c ${SRC_PATH}/ft_split.c ${SRC_PATH}/ft_str_count_char.c
+        ${SRC_PATH}/ft_substr.c ${SRC_PATH}/ft_strjoin.c ${SRC_PATH}/ft_strtab.c ${SRC_PATH}/ft_strjoin_list.c ${SRC_PATH}/ft_charjoin.c ${SRC_PATH}/ft_strtrim.c ${SRC_PATH}/ft_split.c ${SRC_PATH}/ft_str_count_char.c
         ${SRC_PATH}/ft_str_count_chars.c ${SRC_PATH}/ft_nbrlen.c ${SRC_PATH}/ft_itoa.c ${SRC_PATH}/ft_setitoa.c ${SRC_PATH}/ft_dtoa.c ${SRC_PATH}/ft_setdtoa.c ${SRC_PATH}/ft_strmapi.c ${SRC_PATH}/ft_striteri.c
         ${SRC_PATH}/ft_putchar_fd.c ${SRC_PATH}/ft_putstr_fd.c ${SRC_PATH}/ft_putendl_fd.c ${SRC_PATH}/ft_putnbr_fd.c ${SRC_PATH}/ft_strdup.c
         ${SRC_PATH}/ft_calloc.c ${SRC_PATH}/ft_putnbr_base_fd.c ${SRC_PATH}/ft_putlnbr_fd.c ${SRC_PATH}/ft_strlentab.c ${SRC_PATH}/ft_realloc.c

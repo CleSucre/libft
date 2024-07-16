@@ -6,7 +6,7 @@
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:07:53 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:07:53 by julthoma         ###   ########.fr       */
+/*   Updated: 2024/07/17 01:06:27 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
+# include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
 
@@ -61,6 +62,7 @@ int		ft_atoi(const char *str);
 int		ft_isspace(int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
+char	**ft_tabjoin(const char **tab1, const char **tab2);
 char	*ft_strjoin_list(char const **strs, const char *sep);
 char	*ft_charjoin(char *str, char c);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -118,5 +120,14 @@ int		ft_fprintf(int fd, const char *format, ...);
 // ========MEMORY========
 
 int		ft_freetab(char **tab);
+
+// ========UTF8========
+
+int		ft_utf8_isascii(unsigned char c);
+int		ft_utf8_istwobyte(unsigned char c);
+int		ft_utf8_isthreebyte(unsigned char c);
+int		ft_utf8_isfourbyte(unsigned char c);
+char	**ft_utf8_split_chars(char *str);
+char	*ft_utf8_tab_to_str(char **utf8tab);
 
 #endif

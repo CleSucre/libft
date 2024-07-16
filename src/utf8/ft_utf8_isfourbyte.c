@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_utf8_isfourbyte.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: julthoma <julthoma@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:02:36 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/17 01:03:07 by julthoma         ###   ########.fr       */
+/*   Created: 2024/07/17 01:05:15 by julthoma          #+#    #+#             */
+/*   Updated: 2024/07/17 01:05:16 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
-{
-	return (c >= 0 && c <= 127);
+int ft_utf8_isfourbyte(unsigned char c) {
+	return (c & 0xF8) == 0xF0;
 }

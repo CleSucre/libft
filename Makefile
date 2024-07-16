@@ -25,7 +25,7 @@ NAME		= libft.a
 SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c \
 			  ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_isupper.c ft_islower.c \
-			  ft_tolower.c ft_strchr.c ft_strrchr.c ft_strcmp.c ft_strncmp.c \
+			  ft_tabjoin.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strcmp.c ft_strncmp.c \
 			  ft_memchr.c ft_memcmp.c ft_strnstr.c ft_strncpy.c ft_atoi.c ft_isspace.c \
 			  ft_substr.c ft_strjoin.c ft_strjoin_list.c ft_charjoin.c ft_strtrim.c ft_split.c ft_split_quote.c ft_str_count_char.c \
 			  ft_str_count_chars.c ft_nbrlen.c ft_itoa.c ft_setitoa.c ft_dtoa.c ft_setdtoa.c ft_strmapi.c ft_striteri.c \
@@ -37,7 +37,8 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  lst${DIRSEP}ft_lstdelone.c lst${DIRSEP}ft_lstclear.c lst${DIRSEP}ft_lstiter.c lst${DIRSEP}ft_lstmap.c lst${DIRSEP}ft_lstprint.c \
 			  get_next_line${DIRSEP}get_next_line.c \
 			  ft_printf${DIRSEP}ft_printf.c \
-			  mem${DIRSEP}ft_freetab.c
+			  mem${DIRSEP}ft_freetab.c \
+			  utf8${DIRSEP}ft_utf8_split_chars.c utf8${DIRSEP}ft_utf8_tab_to_str.c utf8${DIRSEP}ft_utf8_isascii.c utf8${DIRSEP}ft_utf8_isfourbyte.c utf8${DIRSEP}ft_utf8_isthreebyte.c utf8${DIRSEP}ft_utf8_istwobyte.c
 
 OBJ_PATH	= obj${DIRSEP}
 
