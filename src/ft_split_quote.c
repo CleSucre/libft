@@ -76,7 +76,7 @@ static char	**process_string(const char *str, const char *charset,
 		}
 		if (count == capacity && !resize_result(&result, &capacity))
 		{
-			ft_freetab(result);
+			ft_tabfree(result);
 			return (NULL);
 		}
 		result[count++] = create_word(start, str - start);

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlentab.c                                     :+:      :+:    :+:   */
+/*   ft_tablen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:06:39 by julthoma          #+#    #+#             */
-/*   Updated: 2023/11/02 17:06:41 by julthoma         ###   ########.fr       */
+/*   Updated: 2024/07/19 02:26:00 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlentab(const char **s)
+size_t	ft_tablen(const char **tab)
 {
 	int	i;
 
+	if (!tab)
+		return (0);
+	if (!*tab)
+		return (0);
 	i = 0;
-	while (s[i])
+	while (tab[i])
 		i++;
 	return (i);
 }

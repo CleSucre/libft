@@ -6,7 +6,7 @@
 /*   By: julthoma <julthoma@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 00:02:11 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/17 01:25:27 by julthoma         ###   ########.fr       */
+/*   Updated: 2024/07/17 03:02:53 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	add_char(char **res, char **str, int *i, int size)
 	res[*i] = ft_calloc(size + 1, sizeof(char));
 	if (res[*i] == NULL)
 	{
-		ft_freetab(res);
+		ft_tabfree(res);
 		return (0);
 	}
 	j = 0;

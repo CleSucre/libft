@@ -17,14 +17,14 @@ set(SRCS
         ${SRC_PATH}/ft_substr.c ${SRC_PATH}/ft_strjoin.c ${SRC_PATH}/ft_strjoin_list.c ${SRC_PATH}/ft_charjoin.c ${SRC_PATH}/ft_strtrim.c ${SRC_PATH}/ft_split.c ${SRC_PATH}/ft_split_quote.c ${SRC_PATH}/ft_str_count_char.c
         ${SRC_PATH}/ft_str_count_chars.c ${SRC_PATH}/ft_nbrlen.c ${SRC_PATH}/ft_itoa.c ${SRC_PATH}/ft_setitoa.c ${SRC_PATH}/ft_dtoa.c ${SRC_PATH}/ft_setdtoa.c ${SRC_PATH}/ft_strmapi.c ${SRC_PATH}/ft_striteri.c
         ${SRC_PATH}/ft_putchar_fd.c ${SRC_PATH}/ft_putstr_fd.c ${SRC_PATH}/ft_putendl_fd.c ${SRC_PATH}/ft_putnbr_fd.c ${SRC_PATH}/ft_strdup.c
-        ${SRC_PATH}/ft_calloc.c ${SRC_PATH}/ft_putnbr_base_fd.c ${SRC_PATH}/ft_putlnbr_fd.c ${SRC_PATH}/ft_strlentab.c ${SRC_PATH}/ft_realloc.c
+        ${SRC_PATH}/ft_calloc.c ${SRC_PATH}/ft_putnbr_base_fd.c ${SRC_PATH}/ft_putlnbr_fd.c ${SRC_PATH}/ft_tablen.c ${SRC_PATH}/ft_realloc.c
         ${SRC_PATH}/ft_putnbr_unsigned_fd.c ${SRC_PATH}/ft_putpointer_fd.c ${SRC_PATH}/ft_count_words.c ${SRC_PATH}/ft_putnbr_float_fd.c ${SRC_PATH}/get_lines.c
         ${SRC_PATH}/lst/ft_lstnew.c ${SRC_PATH}/lst/ft_lstadd_front.c
         ${SRC_PATH}/lst/ft_lstsize.c ${SRC_PATH}/lst/ft_lstlast.c ${SRC_PATH}/lst/ft_lstadd_back.c ${SRC_PATH}/ft_trunc.c
         ${SRC_PATH}/lst/ft_lstdelone.c ${SRC_PATH}/lst/ft_lstclear.c ${SRC_PATH}/lst/ft_lstiter.c ${SRC_PATH}/lst/ft_lstmap.c ${SRC_PATH}/lst/ft_lstprint.c
         ${SRC_PATH}/get_next_line/get_next_line.c
         ${SRC_PATH}/ft_printf/ft_printf.c
-        ${SRC_PATH}/mem/ft_freetab.c
+        ${SRC_PATH}/table/ft_tabfree.c
 )
 
 # Définir l'exécutable de l'archive

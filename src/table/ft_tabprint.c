@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_tabprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: julthoma <julthoma@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:05:49 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/19 03:46:26 by julthoma         ###   ########.fr       */
+/*   Created: 2024/07/19 03:41:13 by julthoma          #+#    #+#             */
+/*   Updated: 2024/07/19 04:10:39 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd(const char *str, int fd)
+void	ft_tabprint(const char **tab, const char *prefix,
+			const char *suffix, int fd)
 {
-	if (!str)
-		str = "(null)";
-	return (write(fd, str, ft_strlen(str)));
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		ft_putstr_fd(prefix, fd);
+		ft_putstr_fd(tab[i], fd);
+		ft_putstr_fd(suffix, fd);
+		ft_putchar_fd('\n', fd);
+		i++;
+	}
 }

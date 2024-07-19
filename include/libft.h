@@ -6,7 +6,7 @@
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:07:53 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/17 01:06:27 by julthoma         ###   ########.fr       */
+/*   Updated: 2024/07/19 04:09:28 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 size_t	ft_strlen(const char *s);
-size_t	ft_strlentab(const char **s);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -63,7 +62,6 @@ int		ft_isspace(int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strjoin_free(char *s1, char *s2);
-char	**ft_tabjoin(const char **tab1, const char **tab2);
 char	*ft_strjoin_list(char const **strs, const char *sep);
 char	*ft_charjoin(char *str, char c);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -80,8 +78,8 @@ char	*ft_dtoa(double n, int precision);
 void	*ft_setdtoa(char *dst, double n, int precision);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-int		ft_putchar_fd(char c, int fd);
-int		ft_putstr_fd(char *str, int fd);
+int		ft_putchar_fd(const char c, int fd);
+int		ft_putstr_fd(const char *str, int fd);
 int		ft_putendl_fd(char *s, int fd);
 int		ft_putnbr_fd(int n, int fd);
 char	*ft_strdup(const char *s1);
@@ -123,10 +121,6 @@ char	**get_lines(int fd);
 int		ft_printf(const char *format, ...);
 int		ft_fprintf(int fd, const char *format, ...);
 
-// ========MEMORY========
-
-int		ft_freetab(char **tab);
-
 // ========UTF8========
 
 int		ft_utf8_isascii(unsigned char c);
@@ -135,5 +129,16 @@ int		ft_utf8_isthreebyte(unsigned char c);
 int		ft_utf8_isfourbyte(unsigned char c);
 char	**ft_utf8_split_chars(char *str);
 char	*ft_utf8_tab_to_str(char **utf8tab);
+
+// ========UTF8========
+
+int		ft_tabdel(char **tab, unsigned int pos);
+char	**ft_tabdup(const char **tab);
+void	ft_tabfree(char **tab);
+char	**ft_tabinsert(char **tab, char *str, size_t pos);
+char	**ft_tabjoin(char **tab1, char **tab2);
+size_t	ft_tablen(const char **tab);
+void	ft_tabprint(const char **tab, const char *prefix,
+			const char *suffix, int fd);
 
 #endif

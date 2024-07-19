@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_tabfree.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/02 17:05:49 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/19 03:46:26 by julthoma         ###   ########.fr       */
+/*   Created: 2024/02/06 18:02:57 by julthoma          #+#    #+#             */
+/*   Updated: 2024/07/19 00:50:24 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_putstr_fd(const char *str, int fd)
+void	ft_tabfree(char **tab)
 {
-	if (!str)
-		str = "(null)";
-	return (write(fd, str, ft_strlen(str)));
+	int	i;
+
+	i = 0;
+	while (tab[i])
+	{
+		free(tab[i]);
+		tab[i++] = NULL;
+	}
+	free(tab);
+	tab = NULL;
 }
