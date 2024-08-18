@@ -46,17 +46,16 @@ char	**ft_tabjoin(char **tab1, char **tab2)
 	j = 0;
 	while (tab2[j])
 	{
-		new_tab[i] = ft_strdup(tab2[j]);
+		new_tab[i + j] = ft_strdup(tab2[j]);
 		if (!new_tab[i])
 		{
 			ft_tabfree(new_tab);
 			free_tabs(tab1, tab2);
 			return (NULL);
 		}
-		i++;
 		j++;
 	}
-	new_tab[i] = NULL;
+	new_tab[i + j] = NULL;
 	free_tabs(tab1, tab2);
 	return (new_tab);
 }
