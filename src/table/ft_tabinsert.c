@@ -35,10 +35,7 @@ char	**ft_tabinsert(char **tab, char *str, size_t pos)
 		j++;
 	}
 	if (i == pos)
-	{
-		new[j] = ft_strdup(str);
-		j++;
-	}
+		new[j++] = ft_strdup(str);
 	new[j] = NULL;
 	ft_tabfree(tab);
 	return (new);
