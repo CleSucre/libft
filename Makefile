@@ -28,7 +28,7 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  ft_tolower.c \
 			  ft_memchr.c ft_memcmp.c ft_atoi.c ft_isspace.c \
 			  ft_charjoin.c \
-			  ft_nbrlen.c ft_itoa.c ft_setitoa.c ft_dtoa.c ft_setdtoa.c \
+			  ft_nbrlen.c ft_itoa.c ft_setitoa.c ft_dtoa.c ft_is_between.c ft_setdtoa.c \
 			  ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 			  ft_calloc.c ft_putnbr_base_fd.c ft_putlnbr_fd.c ft_realloc.c ft_is_charset.c \
 			  ft_putnbr_unsigned_fd.c ft_putpointer_fd.c ft_count_words.c ft_putnbr_float_fd.c get_lines.c \
