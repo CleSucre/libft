@@ -95,6 +95,9 @@ char		*ft_strreplace(char *str, char *old, char *new_lst);
 int			ft_strsameedge(const char *str, const char *edge);
 char		*string_lower(char *str);
 
+// ========STR=========
+void	repeat_str(char *key, int x);
+
 // ========LIST========
 
 t_list		*ft_lstnew(void *content);
