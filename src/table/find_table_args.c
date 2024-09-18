@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 /**
  * @brief find a specific lines in tab about searched param
  * 			Example : in an env tab, find specific string about PATH
