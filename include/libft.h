@@ -101,6 +101,7 @@ char		*string_lower(char *str);
 // ========STR=========
 void		repeat_str(char *key, int x);
 void		clear_string(char *str);
+char		*strcpy_passing_char(char *str, int nb);
 
 // ========LIST========
 
