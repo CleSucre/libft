@@ -45,7 +45,8 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  get_next_line${DIRSEP}get_next_line.c \
 			  ft_printf${DIRSEP}ft_printf.c \
 			  utf8${DIRSEP}ft_utf8_split_chars.c utf8${DIRSEP}ft_utf8_tab_to_str.c utf8${DIRSEP}ft_utf8_isascii.c utf8${DIRSEP}ft_utf8_isfourbyte.c utf8${DIRSEP}ft_utf8_isthreebyte.c utf8${DIRSEP}ft_utf8_istwobyte.c \
-			  table${DIRSEP}ft_tabdup.c table${DIRSEP}ft_tablen.c table${DIRSEP}ft_tabjoin.c table${DIRSEP}ft_tabfree.c table${DIRSEP}ft_tabdel.c table${DIRSEP}ft_tabinsert.c table${DIRSEP}ft_tabprint.c
+			  table${DIRSEP}ft_tabdup.c table${DIRSEP}ft_tablen.c table${DIRSEP}ft_tabjoin.c table${DIRSEP}ft_tabfree.c table${DIRSEP}ft_tabdel.c table${DIRSEP}ft_tabinsert.c table${DIRSEP}ft_tabprint.c \
+			  table${DIRSEP}find_table_args.c
 
 OBJ_PATH	= obj${DIRSEP}
 

@@ -96,7 +96,7 @@ int			ft_strsameedge(const char *str, const char *edge);
 char		*string_lower(char *str);
 
 // ========STR=========
-void	repeat_str(char *key, int x);
+void		repeat_str(char *key, int x);
 
 // ========LIST========
 
@@ -140,6 +140,7 @@ char		**ft_tabjoin(char **tab1, char **tab2);
 size_t		ft_tablen(const char **tab);
 void		ft_tabprint(const char **tab, const char *prefix,
 				const char *suffix, int fd);
+int			find_table_args(char **table, char *search);
 
 // ========SPLIT========
 
