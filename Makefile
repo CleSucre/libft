@@ -42,7 +42,7 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  lst${DIRSEP}ft_lstnew.c lst${DIRSEP}ft_lstadd_front.c \
 			  lst${DIRSEP}ft_lstsize.c lst${DIRSEP}ft_lstlast.c lst${DIRSEP}ft_lstadd_back.c ft_trunc.c \
 			  lst${DIRSEP}ft_lstdelone.c lst${DIRSEP}ft_lstclear.c lst${DIRSEP}ft_lstiter.c lst${DIRSEP}ft_lstmap.c lst${DIRSEP}ft_lstprint.c \
-			  get_next_line${DIRSEP}get_next_line.c \
+			  file${DIRSEP}get_next_line.c file${DIRSEP}copy_fd_contents.c \
 			  ft_printf${DIRSEP}ft_printf.c \
 			  utf8${DIRSEP}ft_utf8_split_chars.c utf8${DIRSEP}ft_utf8_tab_to_str.c utf8${DIRSEP}ft_utf8_isascii.c utf8${DIRSEP}ft_utf8_isfourbyte.c utf8${DIRSEP}ft_utf8_isthreebyte.c utf8${DIRSEP}ft_utf8_istwobyte.c \
 			  table${DIRSEP}ft_tabdup.c table${DIRSEP}ft_tablen.c table${DIRSEP}ft_tabjoin.c table${DIRSEP}ft_tabfree.c table${DIRSEP}ft_tabdel.c table${DIRSEP}ft_tabinsert.c table${DIRSEP}ft_tabprint.c \

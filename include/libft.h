@@ -116,10 +116,11 @@ void		ft_lstiter(t_list *lst, void (*f)(void *));
 t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list		*ft_lstprint(t_list *lst);
 
-// ========GET_NEXT_LINE========
+// ========FILE========
 
 char		*get_next_line(int fd);
 char		**get_lines(int fd);
+ssize_t		copy_fd_contents(int fd_from, int fd_to);
 
 // ========PRINTF========
 
