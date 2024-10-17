@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <limits.h>
+# include <dirent.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 4096
@@ -97,6 +98,8 @@ void		ft_trunc(char **str, size_t era);
 char		*ft_strreplace(char *str, char *old, char *new_lst);
 int			ft_strsameedge(const char *str, const char *edge);
 char		*string_lower(char *str);
+void		ft_swap(char **a, char **b);
+void		ft_sort(char *tabenv[], int min, int max);
 
 // ========STR=========
 void		repeat_str(char *key, int x);
@@ -121,6 +124,7 @@ t_list		*ft_lstprint(t_list *lst);
 char		*get_next_line(int fd);
 char		**get_lines(int fd);
 ssize_t		copy_fd_contents(int fd_from, int fd_to);
+char		**ft_list_dir(char *path);
 
 // ========PRINTF========
 

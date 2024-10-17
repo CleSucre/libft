@@ -29,7 +29,7 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  ft_memchr.c ft_memcmp.c ft_atoi.c ft_isspace.c \
 			  ft_charjoin.c \
 			  ft_nbrlen.c ft_itoa.c ft_setitoa.c ft_dtoa.c ft_setdtoa.c \
-			  ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+			  ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_swap.c ft_sort.c \
 			  ft_calloc.c ft_putnbr_base_fd.c ft_putlnbr_fd.c ft_realloc.c ft_is_charset.c \
 			  ft_putnbr_unsigned_fd.c ft_putpointer_fd.c ft_count_words.c ft_putnbr_float_fd.c get_lines.c \
 			  str${DIRSEP}ft_strlen.c str${DIRSEP}ft_strlcpy.c str${DIRSEP}ft_strlcat.c str${DIRSEP}ft_strchr.c \
@@ -42,7 +42,7 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  lst${DIRSEP}ft_lstnew.c lst${DIRSEP}ft_lstadd_front.c \
 			  lst${DIRSEP}ft_lstsize.c lst${DIRSEP}ft_lstlast.c lst${DIRSEP}ft_lstadd_back.c ft_trunc.c \
 			  lst${DIRSEP}ft_lstdelone.c lst${DIRSEP}ft_lstclear.c lst${DIRSEP}ft_lstiter.c lst${DIRSEP}ft_lstmap.c lst${DIRSEP}ft_lstprint.c \
-			  file${DIRSEP}get_next_line.c file${DIRSEP}copy_fd_contents.c \
+			  file${DIRSEP}get_next_line.c file${DIRSEP}copy_fd_contents.c file${DIRSEP}ft_list_dir.c \
 			  ft_printf${DIRSEP}ft_printf.c \
 			  utf8${DIRSEP}ft_utf8_split_chars.c utf8${DIRSEP}ft_utf8_tab_to_str.c utf8${DIRSEP}ft_utf8_isascii.c utf8${DIRSEP}ft_utf8_isfourbyte.c utf8${DIRSEP}ft_utf8_isthreebyte.c utf8${DIRSEP}ft_utf8_istwobyte.c \
 			  table${DIRSEP}ft_tabdup.c table${DIRSEP}ft_tablen.c table${DIRSEP}ft_tabjoin.c table${DIRSEP}ft_tabfree.c table${DIRSEP}ft_tabadd.c table${DIRSEP}ft_tabdel.c table${DIRSEP}ft_tabinsert.c table${DIRSEP}ft_tabprint.c \
