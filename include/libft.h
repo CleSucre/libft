@@ -145,6 +145,7 @@ char		*ft_utf8_tab_to_str(char **utf8tab);
 int			ft_tabdel(char **tab, unsigned int pos);
 void		ft_tabdel_empty(char **table);
 void		ft_tabadd(char ***table, char *str);
+char		**ft_tabnew(size_t size);
 char		**ft_tabdup(const char **tab);
 void		ft_tabfree(char **tab);
 char		**ft_tabinsert(char **tab, char *str, size_t pos);
