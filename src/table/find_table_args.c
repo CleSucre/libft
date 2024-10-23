@@ -6,7 +6,7 @@
 /*   By: mpierrot <mpierrot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 1970/01/01 01:00:00 by mpierrot          #+#    #+#             */
-/*   Updated: 2024/10/23 05:04:34 by mpierrot         ###   ########.fr       */
+/*   Updated: 2024/10/23 05:08:57 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,6 @@ int	find_table_args(char **table, char *search)
 	size_t	search_len;
 
 	i = 0;
-	if (!table || !search)
-		return (-1);
-	search_len = ft_strlen(search);
 	if (!table || !search)
 		return (-1);
 	search_len = ft_strlen(search);
