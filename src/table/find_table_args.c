@@ -22,13 +22,21 @@
 int	find_table_args(char **table, char *search)
 {
 	int	i;
+    size_t	search_len;
 
 	i = 0;
+	if (!table || !search)
+		return (-1);
+	search_len = ft_strlen(search);
 	while (table[i])
 	{
-		if (ft_strncmp(table[i], search, ft_strlen(search)) == 0)
-			return (i);
+		if (ft_strncmp(table[i], search, search_len) == 0)
+		{
+        	if (table[i][search_len] == 0 || table[i][search_len] == '=')
+				return (i);
+		}
 		i++;
 	}
+    ft_putstr_fd("rien trouver\n", 2);
 	return (-1);
 }
