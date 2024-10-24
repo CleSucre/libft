@@ -37,7 +37,7 @@ SRCS		= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 			  str${DIRSEP}ft_strnstr.c str${DIRSEP}ft_strncpy.c str${DIRSEP}ft_substr.c str${DIRSEP}ft_strjoin.c str${DIRSEP}ft_strjoin_char.c \
 			  str${DIRSEP}ft_strjoin_list.c str${DIRSEP}ft_strtrim.c str${DIRSEP}ft_str_count_char.c str${DIRSEP}ft_str_count_chars.c str${DIRSEP}ft_strmapi.c \
 			  str${DIRSEP}ft_striteri.c str${DIRSEP}ft_putstr_fd.c str${DIRSEP}ft_strdup.c str${DIRSEP}ft_strreplace.c str${DIRSEP}ft_strsameedge.c \
-			  str${DIRSEP}repeat_str.c str${DIRSEP}clear_string.c str${DIRSEP}strcpy_passing_char.c\
+			  str${DIRSEP}repeat_str.c str${DIRSEP}clear_string.c str${DIRSEP}strcpy_passing_char.c str${DIRSEP}ft_str_is_alnum.c\
 			  split${DIRSEP}ft_split.c split${DIRSEP}ft_split_quote.c split${DIRSEP}ft_strsplit.c split${DIRSEP}string_processing.c \
 			  lst${DIRSEP}ft_lstnew.c lst${DIRSEP}ft_lstadd_front.c \
 			  lst${DIRSEP}ft_lstsize.c lst${DIRSEP}ft_lstlast.c lst${DIRSEP}ft_lstadd_back.c ft_trunc.c \
