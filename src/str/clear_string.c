@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabfree.c                                       :+:      :+:    :+:   */
+/*   clear_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mpierrot <mpierrot@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 18:02:57 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/19 00:50:24 by julthoma         ###   ########.fr       */
+/*   Created: 1970/01/01 01:00:00 by mpierrot          #+#    #+#             */
+/*   Updated: 2024/09/18 10:36:32 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabfree(char **tab)
+/**
+ * @brief Clear a string by filling it with '\0'
+ * @param str
+ */
+
+void	clear_string(char *str)
 {
+	int	len;
 	int	i;
 
-	if (!tab)
-		return ;
+	len = ft_strlen(str);
 	i = 0;
-	while (tab[i])
+	while (i < len)
 	{
-		free(tab[i]);
-		tab[i++] = NULL;
+		str[i] = '\0';
+		i++;
 	}
-	free(tab);
-	tab = NULL;
 }

@@ -44,6 +44,13 @@ static int	ft_exec(char **dst, int size, char const *str, char const *charset)
 	return (0);
 }
 
+/**
+ * @brief Split a string into an array of strings using a charset
+ *
+ * @param char const *str
+ * @param char const *charset
+ * @return char**
+ */
 char	**ft_split(char const *str, char const *charset)
 {
 	char	**res;

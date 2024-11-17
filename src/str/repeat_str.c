@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabfree.c                                       :+:      :+:    :+:   */
+/*   repeat_str.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mpierrot <mpierrot@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 18:02:57 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/19 00:50:24 by julthoma         ###   ########.fr       */
+/*   Created: 1970/01/01 01:00:00 by mpierrot          #+#    #+#             */
+/*   Updated: 2024/09/10 22:45:27 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabfree(char **tab)
+/**
+ * @brief Print string key X times
+ * @param key string to print
+ * @param x how many times to print
+ */
+void	repeat_str(char *key, int x)
 {
 	int	i;
 
-	if (!tab)
+	if (x < 0 || !key)
 		return ;
 	i = 0;
-	while (tab[i])
+	while (i < x)
 	{
-		free(tab[i]);
-		tab[i++] = NULL;
+		ft_putstr_fd(key, 1);
+		i++;
 	}
-	free(tab);
-	tab = NULL;
 }
