@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabfree.c                                       :+:      :+:    :+:   */
+/*   ft_tabdel_empty.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: julthoma <julthoma@student.42angouleme.f>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 18:02:57 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/19 00:50:24 by julthoma         ###   ########.fr       */
+/*   Created: 2024/10/19 09:24:00 by julthoma          #+#    #+#             */
+/*   Updated: 2024/10/19 09:24:00 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabfree(char **tab)
+void	ft_tabdel_empty(char **table)
 {
 	int	i;
 
-	if (!tab)
-		return ;
 	i = 0;
-	while (tab[i])
+	while (table[i])
 	{
-		free(tab[i]);
-		tab[i++] = NULL;
+		if (!ft_strlen(table[i]))
+		{
+			ft_tabdel(table, i);
+			i--;
+		}
+		i++;
 	}
-	free(tab);
-	tab = NULL;
 }

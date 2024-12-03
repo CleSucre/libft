@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabfree.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_alnum.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mpierrot <mpierrot@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 18:02:57 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/19 00:50:24 by julthoma         ###   ########.fr       */
+/*   Created: 2024/10/24 16:56:45 by mpierrot          #+#    #+#             */
+/*   Updated: 2024/10/24 16:56:45 by mpierrot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabfree(char **tab)
+int	str_is_alnum(char *str)
 {
 	int	i;
 
-	if (!tab)
-		return ;
 	i = 0;
-	while (tab[i])
+	while (str[i])
 	{
-		free(tab[i]);
-		tab[i++] = NULL;
+		if (!ft_isalnum(str[i]) && str[i] != '=')
+			return (0);
+		i++;
 	}
-	free(tab);
-	tab = NULL;
+	return (1);
 }

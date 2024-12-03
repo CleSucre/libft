@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabfree.c                                       :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 18:02:57 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/19 00:50:24 by julthoma         ###   ########.fr       */
+/*   Created: 2024/10/16 00:56:00 by julthoma          #+#    #+#             */
+/*   Updated: 2024/10/16 00:36:00 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabfree(char **tab)
+/**
+ * @brief Swap two pointers
+ *
+ * @param void **a The first pointer
+ * @param void **b The second pointer
+ */
+void	ft_swap(char **a, char **b)
 {
-	int	i;
+	char	*tmp;
 
-	if (!tab)
-		return ;
-	i = 0;
-	while (tab[i])
-	{
-		free(tab[i]);
-		tab[i++] = NULL;
-	}
-	free(tab);
-	tab = NULL;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

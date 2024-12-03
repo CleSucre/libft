@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tabfree.c                                       :+:      :+:    :+:   */
+/*   ft_tabnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julthoma <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 18:02:57 by julthoma          #+#    #+#             */
-/*   Updated: 2024/07/19 00:50:24 by julthoma         ###   ########.fr       */
+/*   Created: 2024/10/23 04:49:00 by julthoma          #+#    #+#             */
+/*   Updated: 2024/10/23 04:49:00 by julthoma         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_tabfree(char **tab)
+char	**ft_tabnew(size_t size)
 {
-	int	i;
+	char	**tab;
+	size_t	i;
 
+	tab = (char **)malloc(sizeof(char *) * (size + 1));
 	if (!tab)
-		return ;
+		return (NULL);
 	i = 0;
-	while (tab[i])
+	while (i < size + 1)
 	{
-		free(tab[i]);
-		tab[i++] = NULL;
+		tab[i] = NULL;
+		i++;
 	}
-	free(tab);
-	tab = NULL;
+	return (tab);
 }
