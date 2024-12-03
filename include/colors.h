@@ -45,5 +45,6 @@
 # define HEX_MAGENTA 0xFF00FF
 # define HEX_CYAN 0x00FFFF
 # define HEX_WHITE 0xFFFFFF
+# define HEX_TRANSPARENT 0x00000000
 
 #endif
