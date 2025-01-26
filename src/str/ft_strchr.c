@@ -27,3 +27,27 @@ char	*ft_strchr(const char *s, int c)
 		return (res);
 	return (NULL);
 }
+
+int	ft_str_is_charset(char *str, char *charset)
+{
+	int	i;
+	int	j;
+	int	valide;
+
+	i = 0;
+	while (str[i])
+	{
+		j = 0;
+		valide = 0;
+		while (charset[j])
+		{
+			if (str[i] == charset[j])
+				valide = 1;
+			j++;
+		}
+		if (!valide)
+			return (1);
+		i++;
+	}
+	return (0);
+}

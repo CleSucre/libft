@@ -52,6 +52,7 @@ int			ft_isupper(int c);
 int			ft_tolower(int c);
 int			ft_islower(int c);
 char		*ft_strchr(const char *s, int c);
+int			ft_str_is_charset(char *str, char *charset);
 char		*ft_strrchr(const char *s, int c);
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
